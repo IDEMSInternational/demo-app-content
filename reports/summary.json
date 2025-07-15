@@ -10,6 +10,18 @@
         "count": 1
       },
       {
+        "type": "set_variable",
+        "count": 1
+      },
+      {
+        "type": "text",
+        "count": 4
+      },
+      {
+        "type": "text_box",
+        "count": 1
+      },
+      {
         "type": "title",
         "count": 1
       }
@@ -56,7 +68,7 @@
       {
         "type": "template",
         "subtype": null,
-        "total": 2
+        "total": 3
       }
     ]
   }

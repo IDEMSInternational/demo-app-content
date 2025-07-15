@@ -16,6 +16,12 @@
       "flow_name": "home_screen",
       "_xlsxPath": "navigation.xlsx",
       "_sheetsFolderUrl": "https://drive.google.com/drive/u/0/folders/12LHuYxe0rCUZ0Bsk8nx_ce59tVa-8vFL"
+    },
+    "reactive_variables": {
+      "flow_type": "template",
+      "flow_name": "reactive_variables",
+      "_xlsxPath": "variables.xlsx",
+      "_sheetsFolderUrl": "https://drive.google.com/drive/u/0/folders/12LHuYxe0rCUZ0Bsk8nx_ce59tVa-8vFL"
     }
   },
   "tour": {}

@@ -3,7 +3,7 @@ const config = generateDeploymentConfig("demo")
 
 config.git = {
   content_repo: "https://github.com/IDEMSInternational/demo-app-content",
-  content_tag_latest: "1.0.2",
+  content_tag_latest: "1.0.3",
 }
 
 config.google_drive = {
@@ -13,5 +13,7 @@ config.google_drive = {
 // Override any app constants here
 config.app_config.APP_HEADER_DEFAULTS.title = "demo"
 config.app_config.APP_SIDEMENU_DEFAULTS.title = "demo"
+
+config.useReactiveTemplates = true;
   
 export default config;
