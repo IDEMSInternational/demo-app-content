@@ -1,0 +1,63 @@
+{
+  "template_components": {
+    "data": [
+      {
+        "type": "button",
+        "count": 1
+      },
+      {
+        "type": "debug_toggle",
+        "count": 1
+      },
+      {
+        "type": "title",
+        "count": 1
+      }
+    ]
+  },
+  "template_actions": {
+    "data": [
+      {
+        "type": "reset_app",
+        "count": 1
+      }
+    ]
+  },
+  "assets_size": {
+    "data": [
+      {
+        "assets": "total",
+        "KB": "0 KB",
+        "MB": "0 MB"
+      },
+      {
+        "assets": "unused",
+        "KB": "527 KB",
+        "MB": "0.5 MB"
+      }
+    ]
+  },
+  "assets_unused": {
+    "data": [
+      {
+        "path": "images/jasper_1.jpg",
+        "size_kb": 527.3
+      }
+    ]
+  },
+  "assets_missing": {
+    "data": []
+  },
+  "asset_summary": {
+    "data": []
+  },
+  "flows_by_type": {
+    "data": [
+      {
+        "type": "template",
+        "subtype": null,
+        "total": 2
+      }
+    ]
+  }
+}
