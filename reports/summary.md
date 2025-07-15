@@ -5,6 +5,9 @@
 | --- | --- |
 | button | 1 |
 | debug_toggle | 1 |
+| set_variable | 1 |
+| text | 4 |
+| text_box | 1 |
 | title | 1 |
 </details>
 
@@ -58,5 +61,5 @@ Assets that are used within sheets and also can be found in the synced asset dat
 
 | type | subtype | total |
 | --- | --- | --- |
-| template |  | 2 |
+| template |  | 3 |
 </details>

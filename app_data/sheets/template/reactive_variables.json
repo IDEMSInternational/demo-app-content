@@ -1,0 +1,59 @@
+{
+  "flow_type": "template",
+  "flow_name": "reactive_variables",
+  "status": "released",
+  "rows": [
+    {
+      "name": "static_text",
+      "value": "Hello",
+      "_translations": {
+        "value": {}
+      },
+      "type": "set_variable",
+      "_nested_name": "static_text"
+    },
+    {
+      "type": "text",
+      "value": "Static text: {local.static_text}",
+      "_translations": {
+        "value": {}
+      },
+      "name": "text_3",
+      "_nested_name": "text_3"
+    },
+    {
+      "type": "text",
+      "value": "{local.static_text}",
+      "_translations": {
+        "value": {}
+      },
+      "name": "text_4",
+      "_nested_name": "text_4"
+    },
+    {
+      "type": "text_box",
+      "name": "input_text",
+      "_nested_name": "input_text"
+    },
+    {
+      "type": "text",
+      "value": "{input_text}",
+      "_translations": {
+        "value": {}
+      },
+      "name": "text_6",
+      "_nested_name": "text_6"
+    },
+    {
+      "type": "text",
+      "value": "To reference a variable, use {\"{my_variable_name}\"}",
+      "_translations": {
+        "value": {}
+      },
+      "name": "text_7",
+      "_nested_name": "text_7"
+    }
+  ],
+  "_xlsxPath": "variables.xlsx",
+  "_sheetsFolderUrl": "https://drive.google.com/drive/u/0/folders/12LHuYxe0rCUZ0Bsk8nx_ce59tVa-8vFL"
+}
