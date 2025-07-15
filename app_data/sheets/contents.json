@@ -1,0 +1,22 @@
+{
+  "asset_pack": {},
+  "data_list": {},
+  "data_pipe": {},
+  "generator": {},
+  "global": {},
+  "template": {
+    "app_menu": {
+      "flow_type": "template",
+      "flow_name": "app_menu",
+      "_xlsxPath": "navigation.xlsx",
+      "_sheetsFolderUrl": "https://drive.google.com/drive/u/0/folders/12LHuYxe0rCUZ0Bsk8nx_ce59tVa-8vFL"
+    },
+    "home_screen": {
+      "flow_type": "template",
+      "flow_name": "home_screen",
+      "_xlsxPath": "navigation.xlsx",
+      "_sheetsFolderUrl": "https://drive.google.com/drive/u/0/folders/12LHuYxe0rCUZ0Bsk8nx_ce59tVa-8vFL"
+    }
+  },
+  "tour": {}
+}
