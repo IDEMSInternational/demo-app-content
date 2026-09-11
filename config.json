@@ -1,0 +1,79 @@
+{
+  "_content_version": "",
+  "_app_builder_version": "",
+  "name": "demo",
+  "api": {
+    "enabled": true,
+    "db_name": "plh",
+    "endpoint": "https://apps-server.idems.international/api",
+    "sync_frequency": 300000
+  },
+  "analytics": {
+    "enabled": true,
+    "provider": "matomo",
+    "siteId": 1,
+    "endpoint": "https://apps-server.idems.international/analytics"
+  },
+  "app_config": {
+    "APP_HEADER_DEFAULTS": {
+      "title": "demo"
+    },
+    "APP_SIDEMENU_DEFAULTS": {
+      "title": "demo"
+    }
+  },
+  "auth": {},
+  "campaigns": {
+    "enabled": true
+  },
+  "remote_functions": {
+    "provider": "firebase"
+  },
+  "shared_data": {
+    "provider": "firebase"
+  },
+  "supabase": {
+    "enabled": false
+  },
+  "web": {},
+  "useReactiveTemplates": true,
+  "google_drive": {
+    "sheets_folder_ids": [
+      "12LHuYxe0rCUZ0Bsk8nx_ce59tVa-8vFL"
+    ],
+    "assets_folder_ids": [
+      "10MM04twOG2iDVmW5VgbmN0Cd1YLU5BsD"
+    ]
+  },
+  "android": {},
+  "local_drive": {
+    "assets_path": "C:\\Source\\CM82\\parenting-app-ui\\.idems_app\\deployments\\demo\\assets",
+    "sheets_path": "C:\\Source\\CM82\\parenting-app-ui\\.idems_app\\deployments\\demo\\sheets"
+  },
+  "app_data": {
+    "output_path": "C:\\Source\\CM82\\parenting-app-ui\\.idems_app\\deployments\\demo\\app_data",
+    "sheets_filter_function": "(flow)=>true",
+    "assets_filter_function": "(fileEntry)=>true"
+  },
+  "ios": {},
+  "optimisation": {},
+  "translations": {
+    "filter_language_codes": null,
+    "source_strings_path": "C:\\Source\\CM82\\parenting-app-ui\\.idems_app\\deployments\\demo\\app_data\\translations_source\\source_strings",
+    "translated_strings_path": "C:\\Source\\CM82\\parenting-app-ui\\.idems_app\\deployments\\demo\\app_data\\translations_source\\translated_strings"
+  },
+  "workflows": {
+    "custom_ts_files": [],
+    "task_cache_path": "C:\\Source\\CM82\\parenting-app-ui\\.idems_app\\deployments\\demo\\tasks"
+  },
+  "git": {
+    "content_repo": "https://github.com/IDEMSInternational/demo-app-content",
+    "content_tag_latest": "1.0.3"
+  },
+  "_validated": true,
+  "_parent_config": null,
+  "_version": 1,
+  "_workspace_path": "C:\\Source\\CM82\\parenting-app-ui\\.idems_app\\deployments\\demo",
+  "_config_ts_path": "C:\\Source\\CM82\\parenting-app-ui\\.idems_app\\deployments\\demo\\config.ts",
+  "_config_version": 20260316
+}
