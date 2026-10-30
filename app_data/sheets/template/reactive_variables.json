@@ -14,21 +14,51 @@
     },
     {
       "type": "text",
-      "value": "Static text: {local.static_text}",
+      "value": "Static text: @local.static_text",
       "_translations": {
         "value": {}
       },
       "name": "text_3",
-      "_nested_name": "text_3"
+      "_nested_name": "text_3",
+      "_dynamicFields": {
+        "value": [
+          {
+            "fullExpression": "Static text: @local.static_text",
+            "matchedExpression": "@local.static_text",
+            "type": "local",
+            "fieldName": "static_text"
+          }
+        ]
+      },
+      "_dynamicDependencies": {
+        "@local.static_text": [
+          "value"
+        ]
+      }
     },
     {
       "type": "text",
-      "value": "{local.static_text}",
+      "value": "@local.static_text",
       "_translations": {
         "value": {}
       },
       "name": "text_4",
-      "_nested_name": "text_4"
+      "_nested_name": "text_4",
+      "_dynamicFields": {
+        "value": [
+          {
+            "fullExpression": "@local.static_text",
+            "matchedExpression": "@local.static_text",
+            "type": "local",
+            "fieldName": "static_text"
+          }
+        ]
+      },
+      "_dynamicDependencies": {
+        "@local.static_text": [
+          "value"
+        ]
+      }
     },
     {
       "type": "text_box",
@@ -37,23 +67,56 @@
     },
     {
       "type": "text",
-      "value": "{input_text}",
+      "value": "@local.input_text",
       "_translations": {
         "value": {}
       },
+      "parameter_list": {
+        "text_align": "left",
+        "style": "emphasised"
+      },
       "name": "text_6",
-      "_nested_name": "text_6"
+      "_nested_name": "text_6",
+      "_dynamicFields": {
+        "value": [
+          {
+            "fullExpression": "@local.input_text",
+            "matchedExpression": "@local.input_text",
+            "type": "local",
+            "fieldName": "input_text"
+          }
+        ]
+      },
+      "_dynamicDependencies": {
+        "@local.input_text": [
+          "value"
+        ]
+      }
     },
     {
       "type": "text",
-      "value": "To reference a variable, use {\"{my_variable_name}\"}",
+      "value": "This shouldn't be here due to a condition",
       "_translations": {
         "value": {}
       },
+      "condition": false,
       "name": "text_7",
       "_nested_name": "text_7"
+    },
+    {
+      "type": "text",
+      "value": "This should be here due to a condition",
+      "_translations": {
+        "value": {}
+      },
+      "condition": true,
+      "name": "text_8",
+      "_nested_name": "text_8"
     }
   ],
-  "_xlsxPath": "variables.xlsx",
-  "_sheetsFolderUrl": "https://drive.google.com/drive/u/0/folders/12LHuYxe0rCUZ0Bsk8nx_ce59tVa-8vFL"
+  "_source": {
+    "name": "12LHuYxe0rCUZ0Bsk8nx_ce59tVa-8vFL",
+    "path": "variables.xlsx",
+    "url": "https://docs.google.com/spreadsheets/d/1wZ6iCGIKcZzm2Bi7-uigVXIMGPwZxJmOHc2gf7ebrnI"
+  }
 }

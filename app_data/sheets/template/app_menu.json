@@ -20,13 +20,15 @@
           "trigger": "click",
           "action_id": "reset_app",
           "args": [],
-          "_raw": "click | reset_app",
-          "_cleaned": "click | reset_app"
+          "_raw": "click | reset_app"
         }
       ],
       "_nested_name": "button_reset"
     }
   ],
-  "_xlsxPath": "navigation.xlsx",
-  "_sheetsFolderUrl": "https://drive.google.com/drive/u/0/folders/12LHuYxe0rCUZ0Bsk8nx_ce59tVa-8vFL"
+  "_source": {
+    "name": "12LHuYxe0rCUZ0Bsk8nx_ce59tVa-8vFL",
+    "path": "navigation.xlsx",
+    "url": "https://docs.google.com/spreadsheets/d/10J1z1F9TA0N72ySpLfw7RojoB1SG5a4_RDj8_q86VcU"
+  }
 }

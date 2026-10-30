@@ -1,0 +1,15 @@
+{
+  "flow_type": "data_list",
+  "flow_name": "components",
+  "status": "released",
+  "rows": [
+    {
+      "id": "button",
+      "component": "button",
+      "option_list": "button_options",
+      "template": "button_template",
+      "description": "This is a button",
+      "available_actions": "click;"
+    }
+  ]
+}

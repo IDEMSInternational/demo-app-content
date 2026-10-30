@@ -1,0 +1,59 @@
+{
+  "flow_type": "template",
+  "flow_name": "nested_template",
+  "status": "released",
+  "rows": [
+    {
+      "type": "text",
+      "name": "text1",
+      "value": "Parent Text 1"
+    },
+    {
+      "type": "text",
+      "name": "parent_text",
+      "value": "Parent Template"
+    },
+    {
+      "type": "text_box",
+      "name": "textbox_parent",
+      "value": "Text Box Value"
+    },
+    {
+      "type": "begin_template",
+      "name": "nested",
+      "value": "nested_template_child"
+    },
+    {
+      "name": "child_text",
+      "value": "New Child Text"
+    },
+    {
+      "type": "end_template"
+    },
+    {
+      "type": "text",
+      "name": "text2",
+      "value": "textbox1: @local.nested.textbox1"
+    },
+    {
+      "type": "begin_template",
+      "name": "nested2",
+      "value": "nested_template_child"
+    },
+    {
+      "name": "child_text",
+      "value": "@local.textbox_parent"
+    },
+    {
+      "type": "end_template"
+    },
+    {
+      "type": "text",
+      "name": "text3",
+      "value": "textbox2: @local.nested2.textbox1"
+    },
+    {
+      "type": "variable_store_debugger"
+    }
+  ]
+}

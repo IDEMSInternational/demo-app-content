@@ -1,0 +1,12 @@
+{
+  "flow_type": "data_list",
+  "flow_name": "basic_result",
+  "status": "released",
+  "rows": [
+    {
+      "id": "id_1",
+      "name": "name 1",
+      "value": "value 1"
+    }
+  ]
+}

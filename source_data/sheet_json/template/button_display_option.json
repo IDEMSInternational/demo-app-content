@@ -1,0 +1,19 @@
+{
+  "flow_type": "template",
+  "flow_name": "button_display_option",
+  "status": "released",
+  "rows": [
+    {
+      "name": "option_list"
+    },
+    {
+      "type": "query",
+      "name": "dropdown_options",
+      "parameter_list": "data_list: @local.option_list;"
+    },
+    {
+      "type": "dropdown",
+      "parameter_list": "options: @local.dropdown_options;\noptions_key: value;\noptions_value: name;"
+    }
+  ]
+}

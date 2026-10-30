@@ -1,0 +1,21 @@
+{
+  "flow_type": "data_list",
+  "flow_name": "style_list",
+  "status": "released",
+  "rows": [
+    {
+      "id": "information",
+      "value": "information",
+      "name": "information",
+      "component_list": [
+        "button"
+      ],
+      "description": "TO DO"
+    }
+  ],
+  "_source": {
+    "name": "12LHuYxe0rCUZ0Bsk8nx_ce59tVa-8vFL",
+    "path": "Components.xlsx",
+    "url": "https://docs.google.com/spreadsheets/d/1yRizub7Rcfnz3hGdzDz7Quczv4yoxihBroIoXkJg-LA"
+  }
+}

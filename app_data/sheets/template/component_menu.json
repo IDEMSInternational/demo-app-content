@@ -1,0 +1,113 @@
+{
+  "flow_type": "template",
+  "flow_name": "component_menu",
+  "status": "released",
+  "rows": [
+    {
+      "type": "title",
+      "value": "All Components",
+      "_translations": {
+        "value": {}
+      },
+      "name": "title_2",
+      "_nested_name": "title_2"
+    },
+    {
+      "type": "query",
+      "name": "component_list",
+      "parameter_list": {
+        "data_list": "components"
+      },
+      "_nested_name": "component_list"
+    },
+    {
+      "type": "loop",
+      "name": "component_loop",
+      "value": "local.component_list",
+      "parameter_list": {
+        "index": "id",
+        "value_type": "script"
+      },
+      "rows": [
+        {
+          "type": "button",
+          "name": "component_button",
+          "value": "${item.component}",
+          "_translations": {
+            "value": {}
+          },
+          "action_list": [
+            {
+              "trigger": "click",
+              "action_id": "action",
+              "args": [
+                "@local.goToTargetAction"
+              ],
+              "_raw": "click | action: @local.goToTargetAction"
+            }
+          ],
+          "_nested_name": "component_loop.component_button",
+          "_dynamicFields": {
+            "action_list": {
+              "0": {
+                "args": {
+                  "0": [
+                    {
+                      "fullExpression": "@local.goToTargetAction",
+                      "matchedExpression": "@local.goToTargetAction",
+                      "type": "local",
+                      "fieldName": "goToTargetAction"
+                    }
+                  ]
+                },
+                "_raw": [
+                  {
+                    "fullExpression": "click | action: @local.goToTargetAction",
+                    "matchedExpression": "@local.goToTargetAction",
+                    "type": "local",
+                    "fieldName": "goToTargetAction"
+                  }
+                ]
+              }
+            }
+          },
+          "_dynamicDependencies": {
+            "@local.goToTargetAction": [
+              "action_list.0.args.0",
+              "action_list.0._raw"
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "name": "component_description",
+          "value": "${item.description}",
+          "_translations": {
+            "value": {}
+          },
+          "_nested_name": "component_loop.component_description"
+        }
+      ],
+      "_nested_name": "component_loop"
+    },
+    {
+      "type": "action",
+      "name": "goToTargetAction",
+      "rows": [
+        {
+          "type": "nav",
+          "name": "goToTargetNav",
+          "value": "button_template",
+          "rows": [],
+          "_nested_name": "goToTargetAction.goToTargetNav"
+        }
+      ],
+      "_nested_name": "goToTargetAction"
+    }
+  ],
+  "_source": {
+    "name": "12LHuYxe0rCUZ0Bsk8nx_ce59tVa-8vFL",
+    "path": "Components.xlsx",
+    "url": "https://docs.google.com/spreadsheets/d/1yRizub7Rcfnz3hGdzDz7Quczv4yoxihBroIoXkJg-LA"
+  }
+}

@@ -1,0 +1,374 @@
+{
+  "flow_type": "template",
+  "flow_name": "basic_form",
+  "status": "released",
+  "language": "en_gb",
+  "rows": [
+    {
+      "type": "title",
+      "value": "Basic Form",
+      "_translations": {
+        "value": {}
+      },
+      "name": "title_2",
+      "_nested_name": "title_2"
+    },
+    {
+      "type": "query",
+      "name": "all_questions",
+      "parameter_list": {
+        "data_list": "basic_questions"
+      },
+      "_nested_name": "all_questions"
+    },
+    {
+      "type": "loop",
+      "name": "all_questions_loop",
+      "value": "local.all_questions",
+      "parameter_list": {
+        "index": "id",
+        "value_type": "script"
+      },
+      "rows": [
+        {
+          "type": "template",
+          "name": "question_template",
+          "value": "question",
+          "rows": [
+            {
+              "name": "question",
+              "value": "${item.question}",
+              "_translations": {
+                "value": {}
+              },
+              "type": "set_variable",
+              "_nested_name": "all_questions_loop.question_template.question"
+            },
+            {
+              "name": "type",
+              "value": "${item.type}",
+              "_translations": {
+                "value": {}
+              },
+              "type": "set_variable",
+              "_nested_name": "all_questions_loop.question_template.type"
+            },
+            {
+              "name": "list_name",
+              "value": "${item.list_name}",
+              "_translations": {
+                "value": {}
+              },
+              "type": "set_variable",
+              "_nested_name": "all_questions_loop.question_template.list_name"
+            },
+            {
+              "name": "validation",
+              "value": "${item.validation}",
+              "_translations": {
+                "value": {}
+              },
+              "type": "set_variable",
+              "_nested_name": "all_questions_loop.question_template.validation"
+            },
+            {
+              "name": "required",
+              "value": "${item.required}",
+              "_translations": {
+                "value": {}
+              },
+              "type": "set_variable",
+              "_nested_name": "all_questions_loop.question_template.required"
+            },
+            {
+              "name": "placeholder",
+              "value": "${item.placeholder}",
+              "_translations": {
+                "value": {}
+              },
+              "type": "set_variable",
+              "_nested_name": "all_questions_loop.question_template.placeholder"
+            }
+          ],
+          "_nested_name": "all_questions_loop.question_template"
+        }
+      ],
+      "_nested_name": "all_questions_loop"
+    },
+    {
+      "type": "button",
+      "value": "submit wide format",
+      "_translations": {
+        "value": {}
+      },
+      "action_list": [
+        {
+          "trigger": "click",
+          "action_id": "action",
+          "args": [
+            "@local.add_to_db_wide"
+          ],
+          "_raw": "click | action: @local.add_to_db_wide"
+        }
+      ],
+      "name": "button_6",
+      "_nested_name": "button_6",
+      "_dynamicFields": {
+        "action_list": {
+          "0": {
+            "args": {
+              "0": [
+                {
+                  "fullExpression": "@local.add_to_db_wide",
+                  "matchedExpression": "@local.add_to_db_wide",
+                  "type": "local",
+                  "fieldName": "add_to_db_wide"
+                }
+              ]
+            },
+            "_raw": [
+              {
+                "fullExpression": "click | action: @local.add_to_db_wide",
+                "matchedExpression": "@local.add_to_db_wide",
+                "type": "local",
+                "fieldName": "add_to_db_wide"
+              }
+            ]
+          }
+        }
+      },
+      "_dynamicDependencies": {
+        "@local.add_to_db_wide": [
+          "action_list.0.args.0",
+          "action_list.0._raw"
+        ]
+      }
+    },
+    {
+      "type": "button",
+      "value": "submit long format",
+      "_translations": {
+        "value": {}
+      },
+      "action_list": [
+        {
+          "trigger": "click",
+          "action_id": "action",
+          "args": [
+            "@local.add_to_db_long"
+          ],
+          "_raw": "click | action: @local.add_to_db_long"
+        }
+      ],
+      "name": "button_7",
+      "_nested_name": "button_7",
+      "_dynamicFields": {
+        "action_list": {
+          "0": {
+            "args": {
+              "0": [
+                {
+                  "fullExpression": "@local.add_to_db_long",
+                  "matchedExpression": "@local.add_to_db_long",
+                  "type": "local",
+                  "fieldName": "add_to_db_long"
+                }
+              ]
+            },
+            "_raw": [
+              {
+                "fullExpression": "click | action: @local.add_to_db_long",
+                "matchedExpression": "@local.add_to_db_long",
+                "type": "local",
+                "fieldName": "add_to_db_long"
+              }
+            ]
+          }
+        }
+      },
+      "_dynamicDependencies": {
+        "@local.add_to_db_long": [
+          "action_list.0.args.0",
+          "action_list.0._raw"
+        ]
+      }
+    },
+    {
+      "type": "action",
+      "name": "add_to_db_long",
+      "rows": [
+        {
+          "type": "loop",
+          "name": "all_answers_loop_long",
+          "value": "local.all_questions",
+          "parameter_list": {
+            "index": "id",
+            "value_type": "script"
+          },
+          "rows": [
+            {
+              "name": "this_id",
+              "value": "crypto.randomUUID()",
+              "_translations": {
+                "value": {}
+              },
+              "parameter_list": {
+                "value_type": "script"
+              },
+              "type": "set_variable",
+              "_nested_name": "add_to_db_long.all_answers_loop_long.this_id"
+            },
+            {
+              "name": "this_value",
+              "value": "local.all_questions_loop[item.id].question_template.value",
+              "_translations": {
+                "value": {}
+              },
+              "parameter_list": {
+                "value_type": "script"
+              },
+              "type": "set_variable",
+              "_nested_name": "add_to_db_long.all_answers_loop_long.this_value"
+            },
+            {
+              "type": "update",
+              "name": "insertRow",
+              "value": "id: local.this_id,\nname: item.id,\nvalue: local.this_value",
+              "_translations": {
+                "value": {}
+              },
+              "parameter_list": {
+                "data_list": "basic_result",
+                "value_type": "script"
+              },
+              "_nested_name": "add_to_db_long.all_answers_loop_long.insertRow"
+            }
+          ],
+          "_nested_name": "add_to_db_long.all_answers_loop_long"
+        }
+      ],
+      "_nested_name": "add_to_db_long"
+    },
+    {
+      "type": "action",
+      "name": "add_to_db_wide",
+      "rows": [
+        {
+          "name": "this_id",
+          "value": "crypto.randomUUID()",
+          "_translations": {
+            "value": {}
+          },
+          "parameter_list": {
+            "value_type": "script"
+          },
+          "type": "set_variable",
+          "_nested_name": "add_to_db_wide.this_id"
+        },
+        {
+          "type": "expression_builder",
+          "name": "query_builder",
+          "value": "${item.id}: \"${local.all_questions_loop[item.id].question_template.value}\",",
+          "_translations": {
+            "value": {}
+          },
+          "parameter_list": {
+            "loop": "@local.all_questions",
+            "initial_value": "\"\""
+          },
+          "_nested_name": "add_to_db_wide.query_builder",
+          "_dynamicFields": {
+            "parameter_list": {
+              "loop": [
+                {
+                  "fullExpression": "@local.all_questions",
+                  "matchedExpression": "@local.all_questions",
+                  "type": "local",
+                  "fieldName": "all_questions"
+                }
+              ]
+            }
+          },
+          "_dynamicDependencies": {
+            "@local.all_questions": [
+              "parameter_list.loop"
+            ]
+          }
+        },
+        {
+          "type": "update",
+          "name": "insertRow",
+          "value": "id: \"${local.this_id}\",\n${local.query_builder}",
+          "_translations": {
+            "value": {}
+          },
+          "parameter_list": {
+            "data_list": "basic_result",
+            "value_type": "string"
+          },
+          "_nested_name": "add_to_db_wide.insertRow"
+        }
+      ],
+      "_nested_name": "add_to_db_wide"
+    },
+    {
+      "type": "expression_builder",
+      "name": "test_query",
+      "value": "${item.id}: \"${local.all_questions_loop[item.id].question_template.value}\",",
+      "_translations": {
+        "value": {}
+      },
+      "parameter_list": {
+        "loop": "@local.all_questions",
+        "initial_value": "\"\""
+      },
+      "_nested_name": "test_query",
+      "_dynamicFields": {
+        "parameter_list": {
+          "loop": [
+            {
+              "fullExpression": "@local.all_questions",
+              "matchedExpression": "@local.all_questions",
+              "type": "local",
+              "fieldName": "all_questions"
+            }
+          ]
+        }
+      },
+      "_dynamicDependencies": {
+        "@local.all_questions": [
+          "parameter_list.loop"
+        ]
+      }
+    },
+    {
+      "type": "text",
+      "value": "@local.test_query",
+      "_translations": {
+        "value": {}
+      },
+      "name": "text_13",
+      "_nested_name": "text_13",
+      "_dynamicFields": {
+        "value": [
+          {
+            "fullExpression": "@local.test_query",
+            "matchedExpression": "@local.test_query",
+            "type": "local",
+            "fieldName": "test_query"
+          }
+        ]
+      },
+      "_dynamicDependencies": {
+        "@local.test_query": [
+          "value"
+        ]
+      }
+    }
+  ],
+  "_source": {
+    "name": "12LHuYxe0rCUZ0Bsk8nx_ce59tVa-8vFL",
+    "path": "Forms.xlsx",
+    "url": "https://docs.google.com/spreadsheets/d/1l6oX3c3s6UcdrpEvmMjjPe7mYCFkhfZAQo0yS9GfxhQ"
+  }
+}

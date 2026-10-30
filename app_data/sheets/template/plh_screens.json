@@ -1,0 +1,97 @@
+{
+  "flow_type": "template",
+  "flow_name": "plh_screens",
+  "status": "released",
+  "rows": [
+    {
+      "type": "title",
+      "value": "PLH Screens",
+      "_translations": {
+        "value": {}
+      },
+      "name": "title_2",
+      "_nested_name": "title_2"
+    },
+    {
+      "type": "button",
+      "value": "Parent Menu",
+      "_translations": {
+        "value": {}
+      },
+      "action_list": [
+        {
+          "trigger": "click",
+          "action_id": "go_to",
+          "args": [
+            "plh_parent_menu"
+          ],
+          "_raw": "click | go_to : plh_parent_menu"
+        }
+      ],
+      "name": "button_3",
+      "_nested_name": "button_3"
+    },
+    {
+      "type": "button",
+      "value": "Library Menu",
+      "_translations": {
+        "value": {}
+      },
+      "action_list": [
+        {
+          "trigger": "click",
+          "action_id": "go_to",
+          "args": [
+            "plh_library_menu"
+          ],
+          "_raw": "click | go_to : plh_library_menu"
+        }
+      ],
+      "name": "button_4",
+      "_nested_name": "button_4"
+    },
+    {
+      "type": "button",
+      "value": "Settings Menu",
+      "_translations": {
+        "value": {}
+      },
+      "action_list": [
+        {
+          "trigger": "click",
+          "action_id": "go_to",
+          "args": [
+            "plh_settings_menu"
+          ],
+          "_raw": "click | go_to : plh_settings_menu"
+        }
+      ],
+      "name": "button_5",
+      "_nested_name": "button_5"
+    },
+    {
+      "type": "button",
+      "value": "Module Navigation",
+      "_translations": {
+        "value": {}
+      },
+      "action_list": [
+        {
+          "trigger": "click",
+          "action_id": "go_to",
+          "args": [
+            "plh_module_navigation"
+          ],
+          "_raw": "click | go_to : plh_module_navigation"
+        }
+      ],
+      "name": "button_6",
+      "_nested_name": "button_6"
+    }
+  ],
+  "_source": {
+    "name": "12LHuYxe0rCUZ0Bsk8nx_ce59tVa-8vFL",
+    "path": "PLH Screens .xlsx",
+    "url": "https://docs.google.com/spreadsheets/d/1ujUfyP3UWQ_3oo76AH8f-BQdCTtsE_7yTsYskAE_eRU"
+  }
+}

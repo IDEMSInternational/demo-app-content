@@ -1,0 +1,100 @@
+{
+  "flow_type": "template",
+  "flow_name": "nested_template_child",
+  "status": "released",
+  "rows": [
+    {
+      "type": "divider",
+      "name": "divider_2",
+      "_nested_name": "divider_2"
+    },
+    {
+      "type": "text",
+      "name": "text1",
+      "value": "Child Text 1",
+      "_translations": {
+        "value": {}
+      },
+      "_nested_name": "text1"
+    },
+    {
+      "type": "text",
+      "name": "child_text",
+      "value": "Child Template",
+      "_translations": {
+        "value": {}
+      },
+      "_nested_name": "child_text"
+    },
+    {
+      "type": "text",
+      "name": "text2",
+      "value": "# Updates Parent",
+      "_translations": {
+        "value": {}
+      },
+      "_nested_name": "text2"
+    },
+    {
+      "type": "text_box",
+      "name": "textbox1",
+      "value": "\"\"",
+      "_translations": {
+        "value": {}
+      },
+      "_nested_name": "textbox1"
+    },
+    {
+      "type": "text",
+      "name": "text3",
+      "value": "# Updates Child",
+      "_translations": {
+        "value": {}
+      },
+      "_nested_name": "text3"
+    },
+    {
+      "type": "text_box",
+      "name": "childTextbox",
+      "value": "\"\"",
+      "_translations": {
+        "value": {}
+      },
+      "_nested_name": "childTextbox"
+    },
+    {
+      "type": "text",
+      "name": "childTextboxValue",
+      "value": "@local.childTextbox",
+      "_translations": {
+        "value": {}
+      },
+      "_nested_name": "childTextboxValue",
+      "_dynamicFields": {
+        "value": [
+          {
+            "fullExpression": "@local.childTextbox",
+            "matchedExpression": "@local.childTextbox",
+            "type": "local",
+            "fieldName": "childTextbox"
+          }
+        ]
+      },
+      "_dynamicDependencies": {
+        "@local.childTextbox": [
+          "value"
+        ]
+      }
+    },
+    {
+      "type": "divider",
+      "name": "divider_10",
+      "_nested_name": "divider_10"
+    }
+  ],
+  "_source": {
+    "name": "12LHuYxe0rCUZ0Bsk8nx_ce59tVa-8vFL",
+    "path": "variables.xlsx",
+    "url": "https://docs.google.com/spreadsheets/d/1wZ6iCGIKcZzm2Bi7-uigVXIMGPwZxJmOHc2gf7ebrnI"
+  }
+}

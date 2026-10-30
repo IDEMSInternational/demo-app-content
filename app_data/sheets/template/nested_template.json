@@ -1,0 +1,141 @@
+{
+  "flow_type": "template",
+  "flow_name": "nested_template",
+  "status": "released",
+  "rows": [
+    {
+      "type": "text",
+      "name": "text1",
+      "value": "Parent Text 1",
+      "_translations": {
+        "value": {}
+      },
+      "_nested_name": "text1"
+    },
+    {
+      "type": "text",
+      "name": "parent_text",
+      "value": "Parent Template",
+      "_translations": {
+        "value": {}
+      },
+      "_nested_name": "parent_text"
+    },
+    {
+      "type": "text_box",
+      "name": "textbox_parent",
+      "value": "Text Box Value",
+      "_translations": {
+        "value": {}
+      },
+      "_nested_name": "textbox_parent"
+    },
+    {
+      "type": "template",
+      "name": "nested",
+      "value": "nested_template_child",
+      "rows": [
+        {
+          "name": "child_text",
+          "value": "New Child Text",
+          "_translations": {
+            "value": {}
+          },
+          "type": "set_variable",
+          "_nested_name": "nested.child_text"
+        }
+      ],
+      "_nested_name": "nested"
+    },
+    {
+      "type": "text",
+      "name": "text2",
+      "value": "textbox1: @local.nested.textbox1",
+      "_translations": {
+        "value": {}
+      },
+      "_nested_name": "text2",
+      "_dynamicFields": {
+        "value": [
+          {
+            "fullExpression": "textbox1: @local.nested.textbox1",
+            "matchedExpression": "@local.nested.textbox1",
+            "type": "local",
+            "fieldName": "nested"
+          }
+        ]
+      },
+      "_dynamicDependencies": {
+        "@local.nested.textbox1": [
+          "value"
+        ]
+      }
+    },
+    {
+      "type": "template",
+      "name": "nested2",
+      "value": "nested_template_child",
+      "rows": [
+        {
+          "name": "child_text",
+          "value": "@local.textbox_parent",
+          "_translations": {
+            "value": {}
+          },
+          "type": "set_variable",
+          "_nested_name": "nested2.child_text",
+          "_dynamicFields": {
+            "value": [
+              {
+                "fullExpression": "@local.textbox_parent",
+                "matchedExpression": "@local.textbox_parent",
+                "type": "local",
+                "fieldName": "textbox_parent"
+              }
+            ]
+          },
+          "_dynamicDependencies": {
+            "@local.textbox_parent": [
+              "value"
+            ]
+          }
+        }
+      ],
+      "_nested_name": "nested2"
+    },
+    {
+      "type": "text",
+      "name": "text3",
+      "value": "textbox2: @local.nested2.textbox1",
+      "_translations": {
+        "value": {}
+      },
+      "_nested_name": "text3",
+      "_dynamicFields": {
+        "value": [
+          {
+            "fullExpression": "textbox2: @local.nested2.textbox1",
+            "matchedExpression": "@local.nested2.textbox1",
+            "type": "local",
+            "fieldName": "nested2"
+          }
+        ]
+      },
+      "_dynamicDependencies": {
+        "@local.nested2.textbox1": [
+          "value"
+        ]
+      }
+    },
+    {
+      "type": "variable_store_debugger",
+      "name": "variable_store_debugger_11",
+      "_nested_name": "variable_store_debugger_11"
+    }
+  ],
+  "_source": {
+    "name": "12LHuYxe0rCUZ0Bsk8nx_ce59tVa-8vFL",
+    "path": "variables.xlsx",
+    "url": "https://docs.google.com/spreadsheets/d/1wZ6iCGIKcZzm2Bi7-uigVXIMGPwZxJmOHc2gf7ebrnI"
+  }
+}

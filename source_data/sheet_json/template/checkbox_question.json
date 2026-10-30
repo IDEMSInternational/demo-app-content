@@ -1,0 +1,15 @@
+{
+  "flow_type": "template",
+  "flow_name": "checkbox_question",
+  "status": "released",
+  "rows": [
+    {
+      "name": "placeholder"
+    },
+    {
+      "type": "toggle_bar",
+      "name": "value",
+      "value": false
+    }
+  ]
+}

@@ -1,0 +1,669 @@
+{
+  "flow_type": "template",
+  "flow_name": "button_template",
+  "status": "released",
+  "rows": [
+    {
+      "type": "title",
+      "value": "Button",
+      "_translations": {
+        "value": {}
+      },
+      "name": "title_2",
+      "_nested_name": "title_2"
+    },
+    {
+      "type": "set_variable",
+      "name": "variant",
+      "value": "${local.variant_dropdown.selected}",
+      "_translations": {
+        "value": {}
+      },
+      "_nested_name": "variant"
+    },
+    {
+      "type": "set_variable",
+      "name": "style",
+      "value": "${local.style_dropdown.selected}",
+      "_translations": {
+        "value": {}
+      },
+      "_nested_name": "style"
+    },
+    {
+      "type": "set_variable",
+      "name": "disabled",
+      "value": "${local.disabled_dropdown.selected}",
+      "_translations": {
+        "value": {}
+      },
+      "_nested_name": "disabled"
+    },
+    {
+      "type": "set_variable",
+      "name": "textAlign",
+      "value": "${local.textAlign_dropdown.selected}",
+      "_translations": {
+        "value": {}
+      },
+      "_nested_name": "textAlign"
+    },
+    {
+      "type": "set_variable",
+      "name": "buttonAlign",
+      "value": "${local.buttonAlign_dropdown.selected}",
+      "_translations": {
+        "value": {}
+      },
+      "_nested_name": "buttonAlign"
+    },
+    {
+      "type": "set_variable",
+      "name": "icon",
+      "value": "${local.icon_dropdown.selected}",
+      "_translations": {
+        "value": {}
+      },
+      "_nested_name": "icon"
+    },
+    {
+      "type": "set_variable",
+      "name": "iconSecondary",
+      "value": "${local.iconSecondary_dropdown.selected}",
+      "_translations": {
+        "value": {}
+      },
+      "_nested_name": "iconSecondary"
+    },
+    {
+      "type": "set_variable",
+      "name": "image",
+      "value": "${local.image_dropdown.selected}",
+      "_translations": {
+        "value": {}
+      },
+      "_nested_name": "image"
+    },
+    {
+      "type": "set_variable",
+      "name": "iconAlign",
+      "value": "${local.iconAlign_dropdown.selected}",
+      "_translations": {
+        "value": {}
+      },
+      "_nested_name": "iconAlign"
+    },
+    {
+      "type": "button",
+      "value": "@local.button_text",
+      "_translations": {
+        "value": {}
+      },
+      "parameter_list": {
+        "variant": "@local.variant",
+        "style": "@local.style",
+        "disabled": "@local.disabled",
+        "textAlign": "@local.textAlign",
+        "buttonAlign": "@local.buttonAlign",
+        "icon": "@local.icon",
+        "iconSecondary": "@local.iconSecondary",
+        "image": "@local.image",
+        "iconAlign": "@local.iconAlign"
+      },
+      "name": "button_12",
+      "_nested_name": "button_12",
+      "_dynamicFields": {
+        "value": [
+          {
+            "fullExpression": "@local.button_text",
+            "matchedExpression": "@local.button_text",
+            "type": "local",
+            "fieldName": "button_text"
+          }
+        ],
+        "parameter_list": {
+          "variant": [
+            {
+              "fullExpression": "@local.variant",
+              "matchedExpression": "@local.variant",
+              "type": "local",
+              "fieldName": "variant"
+            }
+          ],
+          "style": [
+            {
+              "fullExpression": "@local.style",
+              "matchedExpression": "@local.style",
+              "type": "local",
+              "fieldName": "style"
+            }
+          ],
+          "disabled": [
+            {
+              "fullExpression": "@local.disabled",
+              "matchedExpression": "@local.disabled",
+              "type": "local",
+              "fieldName": "disabled"
+            }
+          ],
+          "textAlign": [
+            {
+              "fullExpression": "@local.textAlign",
+              "matchedExpression": "@local.textAlign",
+              "type": "local",
+              "fieldName": "textAlign"
+            }
+          ],
+          "buttonAlign": [
+            {
+              "fullExpression": "@local.buttonAlign",
+              "matchedExpression": "@local.buttonAlign",
+              "type": "local",
+              "fieldName": "buttonAlign"
+            }
+          ],
+          "icon": [
+            {
+              "fullExpression": "@local.icon",
+              "matchedExpression": "@local.icon",
+              "type": "local",
+              "fieldName": "icon"
+            }
+          ],
+          "iconSecondary": [
+            {
+              "fullExpression": "@local.iconSecondary",
+              "matchedExpression": "@local.iconSecondary",
+              "type": "local",
+              "fieldName": "iconSecondary"
+            }
+          ],
+          "image": [
+            {
+              "fullExpression": "@local.image",
+              "matchedExpression": "@local.image",
+              "type": "local",
+              "fieldName": "image"
+            }
+          ],
+          "iconAlign": [
+            {
+              "fullExpression": "@local.iconAlign",
+              "matchedExpression": "@local.iconAlign",
+              "type": "local",
+              "fieldName": "iconAlign"
+            }
+          ]
+        }
+      },
+      "_dynamicDependencies": {
+        "@local.button_text": [
+          "value"
+        ],
+        "@local.variant": [
+          "parameter_list.variant"
+        ],
+        "@local.style": [
+          "parameter_list.style"
+        ],
+        "@local.disabled": [
+          "parameter_list.disabled"
+        ],
+        "@local.textAlign": [
+          "parameter_list.textAlign"
+        ],
+        "@local.buttonAlign": [
+          "parameter_list.buttonAlign"
+        ],
+        "@local.icon": [
+          "parameter_list.icon"
+        ],
+        "@local.iconSecondary": [
+          "parameter_list.iconSecondary"
+        ],
+        "@local.image": [
+          "parameter_list.image"
+        ],
+        "@local.iconAlign": [
+          "parameter_list.iconAlign"
+        ]
+      }
+    },
+    {
+      "type": "title",
+      "value": "Parameters",
+      "_translations": {
+        "value": {}
+      },
+      "name": "title_13",
+      "_nested_name": "title_13"
+    },
+    {
+      "type": "text",
+      "value": "Button Text",
+      "_translations": {
+        "value": {}
+      },
+      "name": "text_14",
+      "_nested_name": "text_14"
+    },
+    {
+      "type": "text_box",
+      "name": "button_text",
+      "value": "Click Here",
+      "_translations": {
+        "value": {}
+      },
+      "parameter_list": {
+        "placeholder": "Enter button text here"
+      },
+      "_nested_name": "button_text"
+    },
+    {
+      "type": "template",
+      "name": "variant_dropdown",
+      "value": "parameter_drop_down",
+      "rows": [
+        {
+          "name": "name",
+          "value": "variant",
+          "_translations": {
+            "value": {}
+          },
+          "type": "set_variable",
+          "_nested_name": "variant_dropdown.name"
+        },
+        {
+          "name": "options",
+          "value": "variant_list",
+          "_translations": {
+            "value": {}
+          },
+          "type": "set_variable",
+          "_nested_name": "variant_dropdown.options"
+        },
+        {
+          "name": "filter",
+          "value": "component_list: button",
+          "_translations": {
+            "value": {}
+          },
+          "type": "set_variable",
+          "_nested_name": "variant_dropdown.filter"
+        },
+        {
+          "name": "default",
+          "value": "default",
+          "_translations": {
+            "value": {}
+          },
+          "type": "set_variable",
+          "_nested_name": "variant_dropdown.default"
+        },
+        {
+          "name": "description",
+          "value": "This is to change the look and feel",
+          "_translations": {
+            "value": {}
+          },
+          "type": "set_variable",
+          "_nested_name": "variant_dropdown.description"
+        }
+      ],
+      "_nested_name": "variant_dropdown"
+    },
+    {
+      "type": "template",
+      "name": "style_dropdown",
+      "value": "parameter_drop_down",
+      "rows": [
+        {
+          "name": "name",
+          "value": "style",
+          "_translations": {
+            "value": {}
+          },
+          "type": "set_variable",
+          "_nested_name": "style_dropdown.name"
+        },
+        {
+          "name": "options",
+          "value": "style_list",
+          "_translations": {
+            "value": {}
+          },
+          "type": "set_variable",
+          "_nested_name": "style_dropdown.options"
+        },
+        {
+          "name": "filter",
+          "value": "component_list: button",
+          "_translations": {
+            "value": {}
+          },
+          "type": "set_variable",
+          "_nested_name": "style_dropdown.filter"
+        },
+        {
+          "name": "default",
+          "value": "information",
+          "_translations": {
+            "value": {}
+          },
+          "type": "set_variable",
+          "_nested_name": "style_dropdown.default"
+        },
+        {
+          "name": "description",
+          "value": "This is to change the style",
+          "_translations": {
+            "value": {}
+          },
+          "type": "set_variable",
+          "_nested_name": "style_dropdown.description"
+        }
+      ],
+      "_nested_name": "style_dropdown"
+    },
+    {
+      "type": "template",
+      "name": "disabled_dropdown",
+      "value": "parameter_drop_down",
+      "rows": [
+        {
+          "name": "name",
+          "value": "disabled",
+          "_translations": {
+            "value": {}
+          },
+          "type": "set_variable",
+          "_nested_name": "disabled_dropdown.name"
+        },
+        {
+          "name": "options",
+          "value": "boolean_list",
+          "_translations": {
+            "value": {}
+          },
+          "type": "set_variable",
+          "_nested_name": "disabled_dropdown.options"
+        },
+        {
+          "name": "filter",
+          "type": "set_variable",
+          "_nested_name": "disabled_dropdown.filter"
+        },
+        {
+          "name": "default",
+          "type": "set_variable",
+          "_nested_name": "disabled_dropdown.default"
+        },
+        {
+          "name": "description",
+          "type": "set_variable",
+          "_nested_name": "disabled_dropdown.description"
+        }
+      ],
+      "_nested_name": "disabled_dropdown"
+    },
+    {
+      "type": "template",
+      "name": "textAlign_dropdown",
+      "value": "parameter_drop_down",
+      "rows": [
+        {
+          "name": "name",
+          "value": "textAlign",
+          "_translations": {
+            "value": {}
+          },
+          "type": "set_variable",
+          "_nested_name": "textAlign_dropdown.name"
+        },
+        {
+          "name": "options",
+          "value": "align_list",
+          "_translations": {
+            "value": {}
+          },
+          "type": "set_variable",
+          "_nested_name": "textAlign_dropdown.options"
+        },
+        {
+          "name": "filter",
+          "type": "set_variable",
+          "_nested_name": "textAlign_dropdown.filter"
+        },
+        {
+          "name": "default",
+          "type": "set_variable",
+          "_nested_name": "textAlign_dropdown.default"
+        },
+        {
+          "name": "description",
+          "type": "set_variable",
+          "_nested_name": "textAlign_dropdown.description"
+        }
+      ],
+      "_nested_name": "textAlign_dropdown"
+    },
+    {
+      "type": "template",
+      "name": "buttonAlign_dropdown",
+      "value": "parameter_drop_down",
+      "rows": [
+        {
+          "name": "name",
+          "value": "buttonAlign",
+          "_translations": {
+            "value": {}
+          },
+          "type": "set_variable",
+          "_nested_name": "buttonAlign_dropdown.name"
+        },
+        {
+          "name": "options",
+          "value": "align_list",
+          "_translations": {
+            "value": {}
+          },
+          "type": "set_variable",
+          "_nested_name": "buttonAlign_dropdown.options"
+        },
+        {
+          "name": "filter",
+          "type": "set_variable",
+          "_nested_name": "buttonAlign_dropdown.filter"
+        },
+        {
+          "name": "default",
+          "type": "set_variable",
+          "_nested_name": "buttonAlign_dropdown.default"
+        },
+        {
+          "name": "description",
+          "type": "set_variable",
+          "_nested_name": "buttonAlign_dropdown.description"
+        }
+      ],
+      "_nested_name": "buttonAlign_dropdown"
+    },
+    {
+      "type": "template",
+      "name": "icon_dropdown",
+      "value": "parameter_drop_down",
+      "rows": [
+        {
+          "name": "name",
+          "value": "icon",
+          "_translations": {
+            "value": {}
+          },
+          "type": "set_variable",
+          "_nested_name": "icon_dropdown.name"
+        },
+        {
+          "name": "options",
+          "value": "image_list",
+          "_translations": {
+            "value": {}
+          },
+          "type": "set_variable",
+          "_nested_name": "icon_dropdown.options"
+        },
+        {
+          "name": "filter",
+          "value": "size: small",
+          "_translations": {
+            "value": {}
+          },
+          "type": "set_variable",
+          "_nested_name": "icon_dropdown.filter"
+        },
+        {
+          "name": "default",
+          "type": "set_variable",
+          "_nested_name": "icon_dropdown.default"
+        },
+        {
+          "name": "description",
+          "type": "set_variable",
+          "_nested_name": "icon_dropdown.description"
+        }
+      ],
+      "_nested_name": "icon_dropdown"
+    },
+    {
+      "type": "template",
+      "name": "iconSecondary_dropdown",
+      "value": "parameter_drop_down",
+      "rows": [
+        {
+          "name": "name",
+          "value": "iconSecondary",
+          "_translations": {
+            "value": {}
+          },
+          "type": "set_variable",
+          "_nested_name": "iconSecondary_dropdown.name"
+        },
+        {
+          "name": "options",
+          "value": "image_list",
+          "_translations": {
+            "value": {}
+          },
+          "type": "set_variable",
+          "_nested_name": "iconSecondary_dropdown.options"
+        },
+        {
+          "name": "filter",
+          "value": "size: small",
+          "_translations": {
+            "value": {}
+          },
+          "type": "set_variable",
+          "_nested_name": "iconSecondary_dropdown.filter"
+        },
+        {
+          "name": "default",
+          "type": "set_variable",
+          "_nested_name": "iconSecondary_dropdown.default"
+        },
+        {
+          "name": "description",
+          "type": "set_variable",
+          "_nested_name": "iconSecondary_dropdown.description"
+        }
+      ],
+      "_nested_name": "iconSecondary_dropdown"
+    },
+    {
+      "type": "template",
+      "name": "image_dropdown",
+      "value": "parameter_drop_down",
+      "rows": [
+        {
+          "name": "name",
+          "value": "image",
+          "_translations": {
+            "value": {}
+          },
+          "type": "set_variable",
+          "_nested_name": "image_dropdown.name"
+        },
+        {
+          "name": "options",
+          "value": "image_list",
+          "_translations": {
+            "value": {}
+          },
+          "type": "set_variable",
+          "_nested_name": "image_dropdown.options"
+        },
+        {
+          "name": "filter",
+          "type": "set_variable",
+          "_nested_name": "image_dropdown.filter"
+        },
+        {
+          "name": "default",
+          "type": "set_variable",
+          "_nested_name": "image_dropdown.default"
+        },
+        {
+          "name": "description",
+          "type": "set_variable",
+          "_nested_name": "image_dropdown.description"
+        }
+      ],
+      "_nested_name": "image_dropdown"
+    },
+    {
+      "type": "template",
+      "name": "iconAlign_dropdown",
+      "value": "parameter_drop_down",
+      "rows": [
+        {
+          "name": "name",
+          "value": "iconAlign",
+          "_translations": {
+            "value": {}
+          },
+          "type": "set_variable",
+          "_nested_name": "iconAlign_dropdown.name"
+        },
+        {
+          "name": "options",
+          "value": "align_list",
+          "_translations": {
+            "value": {}
+          },
+          "type": "set_variable",
+          "_nested_name": "iconAlign_dropdown.options"
+        },
+        {
+          "name": "filter",
+          "type": "set_variable",
+          "_nested_name": "iconAlign_dropdown.filter"
+        },
+        {
+          "name": "default",
+          "type": "set_variable",
+          "_nested_name": "iconAlign_dropdown.default"
+        },
+        {
+          "name": "description",
+          "type": "set_variable",
+          "_nested_name": "iconAlign_dropdown.description"
+        }
+      ],
+      "_nested_name": "iconAlign_dropdown"
+    }
+  ],
+  "_source": {
+    "name": "12LHuYxe0rCUZ0Bsk8nx_ce59tVa-8vFL",
+    "path": "Components.xlsx",
+    "url": "https://docs.google.com/spreadsheets/d/1yRizub7Rcfnz3hGdzDz7Quczv4yoxihBroIoXkJg-LA"
+  }
+}

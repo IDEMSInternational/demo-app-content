@@ -1,0 +1,24 @@
+{
+  "flow_type": "template",
+  "flow_name": "dropdown_question",
+  "status": "released",
+  "rows": [
+    {
+      "name": "placeholder"
+    },
+    {
+      "name": "list_name"
+    },
+    {
+      "type": "query",
+      "name": "options_query",
+      "parameter_list": "data_list: basic_choices;",
+      "comments": "selector: {list_name: '@local.list_name'}"
+    },
+    {
+      "type": "dropdown",
+      "name": "value",
+      "parameter_list": "options: @local.options_query;\noptions_key: id;\noptions_value: value;\nplaceholder: @local.placeholder;"
+    }
+  ]
+}

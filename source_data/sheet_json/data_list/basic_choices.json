@@ -1,0 +1,42 @@
+{
+  "flow_type": "data_list",
+  "flow_name": "basic_choices",
+  "status": "released",
+  "rows": [
+    {
+      "id": "key_1",
+      "list": "first",
+      "value": "This is value 1"
+    },
+    {
+      "id": "key_2",
+      "list": "first",
+      "value": "This is value 2"
+    },
+    {
+      "id": "key_3",
+      "list": "first",
+      "value": "This is value 3"
+    },
+    {
+      "id": "key_4",
+      "list": "second",
+      "value": "This is value 1"
+    },
+    {
+      "id": "key_5",
+      "list": "second",
+      "value": "This is value 2"
+    },
+    {
+      "id": "key_6",
+      "list": "second",
+      "value": "This is value 3"
+    },
+    {
+      "id": "key_7",
+      "list": "second",
+      "value": "This is value 4"
+    }
+  ]
+}

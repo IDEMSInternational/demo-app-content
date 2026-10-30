@@ -1,0 +1,227 @@
+{
+  "flow_type": "template",
+  "flow_name": "question",
+  "status": "released",
+  "rows": [
+    {
+      "name": "question",
+      "type": "set_variable",
+      "_nested_name": "question"
+    },
+    {
+      "name": "type",
+      "type": "set_variable",
+      "_nested_name": "type"
+    },
+    {
+      "name": "list_name",
+      "type": "set_variable",
+      "_nested_name": "list_name"
+    },
+    {
+      "name": "validation",
+      "type": "set_variable",
+      "_nested_name": "validation"
+    },
+    {
+      "name": "required",
+      "type": "set_variable",
+      "_nested_name": "required"
+    },
+    {
+      "name": "placeholder",
+      "type": "set_variable",
+      "_nested_name": "placeholder"
+    },
+    {
+      "type": "text",
+      "value": "local.question",
+      "_translations": {
+        "value": {}
+      },
+      "parameter_list": {
+        "value_type": "script"
+      },
+      "name": "text_8",
+      "_nested_name": "text_8"
+    },
+    {
+      "type": "template",
+      "name": "textbox_question",
+      "value": "textbox_question",
+      "condition": "@local.type == \"textbox\"",
+      "rows": [
+        {
+          "name": "placeholder",
+          "value": "${local.placeholder}",
+          "_translations": {
+            "value": {}
+          },
+          "type": "set_variable",
+          "_nested_name": "textbox_question.placeholder"
+        }
+      ],
+      "_nested_name": "textbox_question",
+      "_dynamicFields": {
+        "condition": [
+          {
+            "fullExpression": "@local.type == \"textbox\"",
+            "matchedExpression": "@local.type",
+            "type": "local",
+            "fieldName": "type"
+          }
+        ]
+      },
+      "_dynamicDependencies": {
+        "@local.type": [
+          "condition"
+        ]
+      }
+    },
+    {
+      "type": "template",
+      "name": "dropdown_question",
+      "value": "dropdown_question",
+      "condition": "@local.type == \"dropdown\"",
+      "rows": [
+        {
+          "name": "list_name",
+          "value": "${local.list_name}",
+          "_translations": {
+            "value": {}
+          },
+          "type": "set_variable",
+          "_nested_name": "dropdown_question.list_name"
+        },
+        {
+          "name": "placeholder",
+          "value": "${local.placeholder}",
+          "_translations": {
+            "value": {}
+          },
+          "type": "set_variable",
+          "_nested_name": "dropdown_question.placeholder"
+        }
+      ],
+      "_nested_name": "dropdown_question",
+      "_dynamicFields": {
+        "condition": [
+          {
+            "fullExpression": "@local.type == \"dropdown\"",
+            "matchedExpression": "@local.type",
+            "type": "local",
+            "fieldName": "type"
+          }
+        ]
+      },
+      "_dynamicDependencies": {
+        "@local.type": [
+          "condition"
+        ]
+      }
+    },
+    {
+      "type": "template",
+      "name": "checkbox_question",
+      "value": "checkbox_question",
+      "condition": "@local.type == \"checkbox\"",
+      "rows": [],
+      "_nested_name": "checkbox_question",
+      "_dynamicFields": {
+        "condition": [
+          {
+            "fullExpression": "@local.type == \"checkbox\"",
+            "matchedExpression": "@local.type",
+            "type": "local",
+            "fieldName": "type"
+          }
+        ]
+      },
+      "_dynamicDependencies": {
+        "@local.type": [
+          "condition"
+        ]
+      }
+    },
+    {
+      "name": "value",
+      "value": "${local.textbox_question.value}",
+      "_translations": {
+        "value": {}
+      },
+      "condition": "@local.type == \"textbox\"",
+      "type": "set_variable",
+      "_nested_name": "value",
+      "_dynamicFields": {
+        "condition": [
+          {
+            "fullExpression": "@local.type == \"textbox\"",
+            "matchedExpression": "@local.type",
+            "type": "local",
+            "fieldName": "type"
+          }
+        ]
+      },
+      "_dynamicDependencies": {
+        "@local.type": [
+          "condition"
+        ]
+      }
+    },
+    {
+      "name": "value",
+      "value": "${local.dropdown_question.value}",
+      "_translations": {
+        "value": {}
+      },
+      "condition": "@local.type == \"dropdown\"",
+      "type": "set_variable",
+      "_nested_name": "value",
+      "_dynamicFields": {
+        "condition": [
+          {
+            "fullExpression": "@local.type == \"dropdown\"",
+            "matchedExpression": "@local.type",
+            "type": "local",
+            "fieldName": "type"
+          }
+        ]
+      },
+      "_dynamicDependencies": {
+        "@local.type": [
+          "condition"
+        ]
+      }
+    },
+    {
+      "name": "value",
+      "value": "${local.checkbox_question.value}",
+      "_translations": {
+        "value": {}
+      },
+      "condition": "@local.type == \"checkbox\"",
+      "type": "set_variable",
+      "_nested_name": "value",
+      "_dynamicFields": {
+        "condition": [
+          {
+            "fullExpression": "@local.type == \"checkbox\"",
+            "matchedExpression": "@local.type",
+            "type": "local",
+            "fieldName": "type"
+          }
+        ]
+      },
+      "_dynamicDependencies": {
+        "@local.type": [
+          "condition"
+        ]
+      }
+    }
+  ],
+  "_source": {
+    "name": "12LHuYxe0rCUZ0Bsk8nx_ce59tVa-8vFL",
+    "path": "Forms.xlsx",
+    "url": "https://docs.google.com/spreadsheets/d/1l6oX3c3s6UcdrpEvmMjjPe7mYCFkhfZAQo0yS9GfxhQ"
+  }
+}

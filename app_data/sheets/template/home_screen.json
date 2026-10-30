@@ -11,8 +11,68 @@
       },
       "name": "title_2",
       "_nested_name": "title_2"
+    },
+    {
+      "type": "button",
+      "value": "Components",
+      "_translations": {
+        "value": {}
+      },
+      "action_list": [
+        {
+          "trigger": "click",
+          "action_id": "go_to",
+          "args": [
+            "component_menu"
+          ],
+          "_raw": "click | go_to : component_menu"
+        }
+      ],
+      "name": "button_3",
+      "_nested_name": "button_3"
+    },
+    {
+      "type": "button",
+      "value": "Forms",
+      "_translations": {
+        "value": {}
+      },
+      "action_list": [
+        {
+          "trigger": "click",
+          "action_id": "go_to",
+          "args": [
+            "basic_form"
+          ],
+          "_raw": "click | go_to : basic_form"
+        }
+      ],
+      "name": "button_4",
+      "_nested_name": "button_4"
+    },
+    {
+      "type": "button",
+      "value": "PLH",
+      "_translations": {
+        "value": {}
+      },
+      "action_list": [
+        {
+          "trigger": "click",
+          "action_id": "go_to",
+          "args": [
+            "plh_screens"
+          ],
+          "_raw": "click | go_to : plh_screens"
+        }
+      ],
+      "name": "button_5",
+      "_nested_name": "button_5"
     }
   ],
-  "_xlsxPath": "navigation.xlsx",
-  "_sheetsFolderUrl": "https://drive.google.com/drive/u/0/folders/12LHuYxe0rCUZ0Bsk8nx_ce59tVa-8vFL"
+  "_source": {
+    "name": "12LHuYxe0rCUZ0Bsk8nx_ce59tVa-8vFL",
+    "path": "navigation.xlsx",
+    "url": "https://docs.google.com/spreadsheets/d/10J1z1F9TA0N72ySpLfw7RojoB1SG5a4_RDj8_q86VcU"
+  }
 }

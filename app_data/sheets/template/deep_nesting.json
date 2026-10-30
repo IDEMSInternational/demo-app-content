@@ -1,0 +1,155 @@
+{
+  "flow_type": "template",
+  "flow_name": "deep_nesting",
+  "status": "released",
+  "rows": [
+    {
+      "type": "text",
+      "name": "text1",
+      "value": "# Parent",
+      "_translations": {
+        "value": {}
+      },
+      "_nested_name": "text1"
+    },
+    {
+      "type": "text",
+      "name": "text2",
+      "value": "This is the parent template",
+      "_translations": {
+        "value": {}
+      },
+      "_nested_name": "text2"
+    },
+    {
+      "type": "text",
+      "name": "text3",
+      "value": "Child Value: @local.child.textbox1",
+      "_translations": {
+        "value": {}
+      },
+      "_nested_name": "text3",
+      "_dynamicFields": {
+        "value": [
+          {
+            "fullExpression": "Child Value: @local.child.textbox1",
+            "matchedExpression": "@local.child.textbox1",
+            "type": "local",
+            "fieldName": "child"
+          }
+        ]
+      },
+      "_dynamicDependencies": {
+        "@local.child.textbox1": [
+          "value"
+        ]
+      }
+    },
+    {
+      "type": "text",
+      "name": "text4",
+      "value": "Grandchild Value: @local.child.grandchild.textbox1",
+      "_translations": {
+        "value": {}
+      },
+      "_nested_name": "text4",
+      "_dynamicFields": {
+        "value": [
+          {
+            "fullExpression": "Grandchild Value: @local.child.grandchild.textbox1",
+            "matchedExpression": "@local.child.grandchild.textbox1",
+            "type": "local",
+            "fieldName": "child"
+          }
+        ]
+      },
+      "_dynamicDependencies": {
+        "@local.child.grandchild.textbox1": [
+          "value"
+        ]
+      }
+    },
+    {
+      "type": "template",
+      "name": "child",
+      "value": "deep_nesting_child",
+      "rows": [],
+      "_nested_name": "child"
+    },
+    {
+      "type": "variable_store_debugger",
+      "name": "loop1",
+      "_nested_name": "loop1"
+    },
+    {
+      "type": "loop",
+      "name": "loopBox",
+      "rows": [
+        {
+          "type": "text_box",
+          "name": "@local.loopBox",
+          "_nested_name": "loopBox.@local.loopBox",
+          "_dynamicFields": {
+            "name": [
+              {
+                "fullExpression": "@local.loopBox",
+                "matchedExpression": "@local.loopBox",
+                "type": "local",
+                "fieldName": "loopBox"
+              }
+            ],
+            "_nested_name": [
+              {
+                "fullExpression": "loopBox.@local.loopBox",
+                "matchedExpression": "@local.loopBox",
+                "type": "local",
+                "fieldName": "loopBox"
+              }
+            ]
+          },
+          "_dynamicDependencies": {
+            "@local.loopBox": [
+              "name",
+              "_nested_name"
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "name": "@local.text1_",
+          "_nested_name": "loopBox.@local.text1_",
+          "_dynamicFields": {
+            "name": [
+              {
+                "fullExpression": "@local.text1_",
+                "matchedExpression": "@local.text1_",
+                "type": "local",
+                "fieldName": "text1_"
+              }
+            ],
+            "_nested_name": [
+              {
+                "fullExpression": "loopBox.@local.text1_",
+                "matchedExpression": "@local.text1_",
+                "type": "local",
+                "fieldName": "text1_"
+              }
+            ]
+          },
+          "_dynamicDependencies": {
+            "@local.text1_": [
+              "name",
+              "_nested_name"
+            ]
+          }
+        }
+      ],
+      "_nested_name": "loopBox"
+    }
+  ],
+  "_source": {
+    "name": "12LHuYxe0rCUZ0Bsk8nx_ce59tVa-8vFL",
+    "path": "variables.xlsx",
+    "url": "https://docs.google.com/spreadsheets/d/1wZ6iCGIKcZzm2Bi7-uigVXIMGPwZxJmOHc2gf7ebrnI"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "flow_type": "template",
+  "flow_name": "textbox_question",
+  "status": "released",
+  "rows": [
+    {
+      "name": "placeholder"
+    },
+    {
+      "type": "text_box",
+      "name": "value",
+      "parameter_list": "placeholder: @local.placeholder"
+    }
+  ]
+}

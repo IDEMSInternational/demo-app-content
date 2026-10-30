@@ -1,0 +1,22 @@
+{
+  "flow_type": "template",
+  "flow_name": "plh_module_page",
+  "status": "released",
+  "rows": [
+    {
+      "name": "page_details"
+    },
+    {
+      "name": "display_text",
+      "value": "@local.page_details.text"
+    },
+    {
+      "type": "text",
+      "value": "module page"
+    },
+    {
+      "type": "text",
+      "value": "@local.display_text"
+    }
+  ]
+}

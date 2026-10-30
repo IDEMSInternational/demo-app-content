@@ -1,0 +1,26 @@
+{
+  "flow_type": "template",
+  "flow_name": "home_screen",
+  "status": "released",
+  "rows": [
+    {
+      "type": "title",
+      "value": "Demo App"
+    },
+    {
+      "type": "button",
+      "value": "Components",
+      "action_list": "click | go_to : component_menu"
+    },
+    {
+      "type": "button",
+      "value": "Forms",
+      "action_list": "click | go_to : basic_form"
+    },
+    {
+      "type": "button",
+      "value": "PLH",
+      "action_list": "click | go_to : plh_screens"
+    }
+  ]
+}

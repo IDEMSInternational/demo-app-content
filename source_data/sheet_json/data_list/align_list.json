@@ -1,0 +1,25 @@
+{
+  "flow_type": "data_list",
+  "flow_name": "align_list",
+  "status": "released",
+  "rows": [
+    {
+      "id": "left",
+      "value": "left",
+      "name": "left",
+      "description": "left aligned"
+    },
+    {
+      "id": "centre",
+      "value": "centre",
+      "name": "centre",
+      "description": "centre aligned"
+    },
+    {
+      "id": "right",
+      "value": "right",
+      "name": "right",
+      "description": "right aligned"
+    }
+  ]
+}

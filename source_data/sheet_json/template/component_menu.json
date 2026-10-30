@@ -1,0 +1,51 @@
+{
+  "flow_type": "template",
+  "flow_name": "component_menu",
+  "status": "released",
+  "rows": [
+    {
+      "type": "title",
+      "value": "All Components"
+    },
+    {
+      "type": "query",
+      "name": "component_list",
+      "parameter_list": "data_list: components;"
+    },
+    {
+      "type": "begin_loop",
+      "name": "component_loop",
+      "value": "local.component_list",
+      "parameter_list": "index: id;\nvalue_type: script"
+    },
+    {
+      "type": "button",
+      "name": "component_button",
+      "value": "${item.component}",
+      "action_list": "click | action: @local.goToTargetAction"
+    },
+    {
+      "type": "text",
+      "name": "component_description",
+      "value": "${item.description}"
+    },
+    {
+      "type": "end_loop"
+    },
+    {
+      "type": "begin_action",
+      "name": "goToTargetAction"
+    },
+    {
+      "type": "begin_nav",
+      "name": "goToTargetNav",
+      "value": "button_template"
+    },
+    {
+      "type": "end_nav"
+    },
+    {
+      "type": "end_action"
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "flow_type": "data_list",
+  "flow_name": "plh_courses",
+  "status": "released",
+  "rows": [
+    {
+      "id": "course_1",
+      "name": "course 1"
+    },
+    {
+      "id": "course_2",
+      "name": "course 2"
+    },
+    {
+      "id": "course_3",
+      "name": "course 3"
+    }
+  ],
+  "_source": {
+    "name": "12LHuYxe0rCUZ0Bsk8nx_ce59tVa-8vFL",
+    "path": "PLH Screens .xlsx",
+    "url": "https://docs.google.com/spreadsheets/d/1ujUfyP3UWQ_3oo76AH8f-BQdCTtsE_7yTsYskAE_eRU"
+  }
+}

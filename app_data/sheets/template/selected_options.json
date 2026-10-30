@@ -1,0 +1,302 @@
+{
+  "flow_type": "template",
+  "flow_name": "selected_options",
+  "status": "released",
+  "rows": [
+    {
+      "name": "component_row",
+      "condition": "This should be a value brought in",
+      "type": "set_variable",
+      "_nested_name": "component_row"
+    },
+    {
+      "name": "option_list",
+      "value": "@local.component_row.option_list",
+      "_translations": {
+        "value": {}
+      },
+      "type": "set_variable",
+      "_nested_name": "option_list",
+      "_dynamicFields": {
+        "value": [
+          {
+            "fullExpression": "@local.component_row.option_list",
+            "matchedExpression": "@local.component_row.option_list",
+            "type": "local",
+            "fieldName": "component_row"
+          }
+        ]
+      },
+      "_dynamicDependencies": {
+        "@local.component_row.option_list": [
+          "value"
+        ]
+      }
+    },
+    {
+      "name": "template",
+      "value": "@local.component_row.template",
+      "_translations": {
+        "value": {}
+      },
+      "type": "set_variable",
+      "_nested_name": "template",
+      "_dynamicFields": {
+        "value": [
+          {
+            "fullExpression": "@local.component_row.template",
+            "matchedExpression": "@local.component_row.template",
+            "type": "local",
+            "fieldName": "component_row"
+          }
+        ]
+      },
+      "_dynamicDependencies": {
+        "@local.component_row.template": [
+          "value"
+        ]
+      }
+    },
+    {
+      "name": "style",
+      "type": "set_variable",
+      "_nested_name": "style"
+    },
+    {
+      "name": "variant",
+      "type": "set_variable",
+      "_nested_name": "variant"
+    },
+    {
+      "name": "display_text",
+      "type": "set_variable",
+      "_nested_name": "display_text"
+    },
+    {
+      "type": "select",
+      "value": "@data.@local.option_list",
+      "_translations": {
+        "value": {}
+      },
+      "name": "select_8",
+      "_nested_name": "select_8",
+      "_dynamicFields": {
+        "value": [
+          {
+            "fullExpression": "@data.@local.option_list",
+            "matchedExpression": "@local.option_list",
+            "type": "local",
+            "fieldName": "option_list"
+          }
+        ]
+      },
+      "_dynamicDependencies": {
+        "@local.option_list": [
+          "value"
+        ]
+      }
+    },
+    {
+      "type": "loop",
+      "rows": [
+        {
+          "type": "text",
+          "value": "@item.parameter",
+          "_translations": {
+            "value": {}
+          },
+          "name": "text_1",
+          "_nested_name": "loop_9.text_1",
+          "_dynamicFields": {
+            "value": [
+              {
+                "fullExpression": "@item.parameter",
+                "matchedExpression": "@item.parameter",
+                "type": "item",
+                "fieldName": "parameter"
+              }
+            ]
+          },
+          "_dynamicDependencies": {
+            "@item.parameter": [
+              "value"
+            ]
+          }
+        },
+        {
+          "type": "combo_box",
+          "action_list": [
+            {
+              "trigger": "click",
+              "action_id": "change",
+              "args": [],
+              "_raw": "change | set_local | @item.parameter : this.value",
+              "params": {}
+            },
+            {
+              "trigger": "click",
+              "action_id": "change",
+              "args": [],
+              "_raw": "change | set_local | parameter_free : this.value",
+              "params": {}
+            }
+          ],
+          "parameter_list": {
+            "list": "@item.option_list"
+          },
+          "name": "combo_box_2",
+          "_nested_name": "loop_9.combo_box_2",
+          "_dynamicFields": {
+            "action_list": {
+              "0": {
+                "_raw": [
+                  {
+                    "fullExpression": "change | set_local | @item.parameter : this.value",
+                    "matchedExpression": "@item.parameter",
+                    "type": "item",
+                    "fieldName": "parameter"
+                  }
+                ]
+              }
+            },
+            "parameter_list": {
+              "list": [
+                {
+                  "fullExpression": "@item.option_list",
+                  "matchedExpression": "@item.option_list",
+                  "type": "item",
+                  "fieldName": "option_list"
+                }
+              ]
+            }
+          },
+          "_dynamicDependencies": {
+            "@item.parameter": [
+              "action_list.0._raw"
+            ],
+            "@item.option_list": [
+              "parameter_list.list"
+            ]
+          }
+        },
+        {
+          "type": "text_box",
+          "name": "parameter_free",
+          "action_list": [
+            {
+              "trigger": "click",
+              "action_id": "change",
+              "args": [],
+              "_raw": "change | set_local | @item.parameter : this.value",
+              "params": {}
+            }
+          ],
+          "_nested_name": "loop_9.parameter_free",
+          "_dynamicFields": {
+            "action_list": {
+              "0": {
+                "_raw": [
+                  {
+                    "fullExpression": "change | set_local | @item.parameter : this.value",
+                    "matchedExpression": "@item.parameter",
+                    "type": "item",
+                    "fieldName": "parameter"
+                  }
+                ]
+              }
+            }
+          },
+          "_dynamicDependencies": {
+            "@item.parameter": [
+              "action_list.0._raw"
+            ]
+          }
+        }
+      ],
+      "name": "loop_9",
+      "_nested_name": "loop_9"
+    },
+    {
+      "type": "template",
+      "rows": [
+        {
+          "name": "style",
+          "value": "@local.style",
+          "_translations": {
+            "value": {}
+          },
+          "type": "set_variable",
+          "_nested_name": "style",
+          "_dynamicFields": {
+            "value": [
+              {
+                "fullExpression": "@local.style",
+                "matchedExpression": "@local.style",
+                "type": "local",
+                "fieldName": "style"
+              }
+            ]
+          },
+          "_dynamicDependencies": {
+            "@local.style": [
+              "value"
+            ]
+          }
+        },
+        {
+          "name": "variant",
+          "value": "@local.variant",
+          "_translations": {
+            "value": {}
+          },
+          "type": "set_variable",
+          "_nested_name": "variant",
+          "_dynamicFields": {
+            "value": [
+              {
+                "fullExpression": "@local.variant",
+                "matchedExpression": "@local.variant",
+                "type": "local",
+                "fieldName": "variant"
+              }
+            ]
+          },
+          "_dynamicDependencies": {
+            "@local.variant": [
+              "value"
+            ]
+          }
+        },
+        {
+          "name": "display_text",
+          "value": "@local.display_text",
+          "_translations": {
+            "value": {}
+          },
+          "type": "set_variable",
+          "_nested_name": "display_text",
+          "_dynamicFields": {
+            "value": [
+              {
+                "fullExpression": "@local.display_text",
+                "matchedExpression": "@local.display_text",
+                "type": "local",
+                "fieldName": "display_text"
+              }
+            ]
+          },
+          "_dynamicDependencies": {
+            "@local.display_text": [
+              "value"
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "_source": {
+    "name": "12LHuYxe0rCUZ0Bsk8nx_ce59tVa-8vFL",
+    "path": "Components.xlsx",
+    "url": "https://docs.google.com/spreadsheets/d/1yRizub7Rcfnz3hGdzDz7Quczv4yoxihBroIoXkJg-LA"
+  }
+}

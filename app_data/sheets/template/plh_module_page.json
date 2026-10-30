@@ -1,0 +1,74 @@
+{
+  "flow_type": "template",
+  "flow_name": "plh_module_page",
+  "status": "released",
+  "rows": [
+    {
+      "name": "page_details",
+      "type": "set_variable",
+      "_nested_name": "page_details"
+    },
+    {
+      "name": "display_text",
+      "value": "@local.page_details.text",
+      "_translations": {
+        "value": {}
+      },
+      "type": "set_variable",
+      "_nested_name": "display_text",
+      "_dynamicFields": {
+        "value": [
+          {
+            "fullExpression": "@local.page_details.text",
+            "matchedExpression": "@local.page_details.text",
+            "type": "local",
+            "fieldName": "page_details"
+          }
+        ]
+      },
+      "_dynamicDependencies": {
+        "@local.page_details.text": [
+          "value"
+        ]
+      }
+    },
+    {
+      "type": "text",
+      "value": "module page",
+      "_translations": {
+        "value": {}
+      },
+      "name": "text_4",
+      "_nested_name": "text_4"
+    },
+    {
+      "type": "text",
+      "value": "@local.display_text",
+      "_translations": {
+        "value": {}
+      },
+      "name": "text_5",
+      "_nested_name": "text_5",
+      "_dynamicFields": {
+        "value": [
+          {
+            "fullExpression": "@local.display_text",
+            "matchedExpression": "@local.display_text",
+            "type": "local",
+            "fieldName": "display_text"
+          }
+        ]
+      },
+      "_dynamicDependencies": {
+        "@local.display_text": [
+          "value"
+        ]
+      }
+    }
+  ],
+  "_source": {
+    "name": "12LHuYxe0rCUZ0Bsk8nx_ce59tVa-8vFL",
+    "path": "PLH Screens .xlsx",
+    "url": "https://docs.google.com/spreadsheets/d/1ujUfyP3UWQ_3oo76AH8f-BQdCTtsE_7yTsYskAE_eRU"
+  }
+}

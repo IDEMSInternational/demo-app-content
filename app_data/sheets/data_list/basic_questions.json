@@ -1,0 +1,64 @@
+{
+  "flow_type": "data_list",
+  "flow_name": "basic_questions",
+  "status": "released",
+  "language": "es_mx",
+  "rows": [
+    {
+      "id": "q_1",
+      "question": "This is a basic textbox question",
+      "type": "textbox",
+      "placeholder": "enter text here"
+    },
+    {
+      "id": "q_2",
+      "question": "This is a basic combobox question",
+      "type": "dropdown",
+      "list_name": "first",
+      "placeholder": "select this"
+    },
+    {
+      "id": "q_3",
+      "question": "This is a basic checkbox question",
+      "type": "checkbox"
+    },
+    {
+      "id": "q_4",
+      "question": "This is a basic textbox question thats required",
+      "type": "textbox",
+      "required": true,
+      "placeholder": "enter text here"
+    },
+    {
+      "id": "q_5",
+      "question": "This is a basic combobox question thats required",
+      "type": "dropdown",
+      "list_name": "second",
+      "required": true,
+      "placeholder": "select this"
+    },
+    {
+      "id": "q_6",
+      "question": "This is a basic checkbox question thats required",
+      "type": "checkbox",
+      "required": true
+    },
+    {
+      "id": "q_7",
+      "question": "This is a basic textbox question with validation",
+      "type": "textbox",
+      "required": false,
+      "placeholder": "enter text here"
+    }
+  ],
+  "_source": {
+    "name": "12LHuYxe0rCUZ0Bsk8nx_ce59tVa-8vFL",
+    "path": "Forms.xlsx",
+    "url": "https://docs.google.com/spreadsheets/d/1l6oX3c3s6UcdrpEvmMjjPe7mYCFkhfZAQo0yS9GfxhQ"
+  },
+  "_metadata": {
+    "required": {
+      "type": "boolean"
+    }
+  }
+}

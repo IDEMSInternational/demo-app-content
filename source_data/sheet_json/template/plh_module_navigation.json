@@ -1,0 +1,80 @@
+{
+  "flow_type": "template",
+  "flow_name": "plh_module_navigation",
+  "status": "released",
+  "rows": [
+    {
+      "name": "title",
+      "value": "To be overwritten"
+    },
+    {
+      "name": "module_datalist"
+    },
+    {
+      "name": "index",
+      "value": 0
+    },
+    {
+      "type": "query",
+      "name": "all_pages",
+      "parameter_list": "data_list: @local.module_datalist"
+    },
+    {
+      "type": "begin_loop",
+      "name": "completed",
+      "value": "local.all_pages",
+      "parameter_list": "index: id;\nvalue_type: script"
+    },
+    {
+      "type": "begin_template",
+      "value": "plh_module_page",
+      "condition": "@loop.index == @local.index"
+    },
+    {
+      "name": "page_details",
+      "value": "@item"
+    },
+    {
+      "type": "end_template"
+    },
+    {
+      "type": "end_loop"
+    },
+    {
+      "type": "button",
+      "value": "back",
+      "action_list": "click | action: @local.decrementIndex"
+    },
+    {
+      "type": "button",
+      "value": "forward",
+      "action_list": "click | action: @local.incrementIndex"
+    },
+    {
+      "type": "begin_action",
+      "name": "incrementIndex"
+    },
+    {
+      "type": "set_variable",
+      "name": "index",
+      "value": "@local.index+ 1",
+      "parameter_list": "value_type: script"
+    },
+    {
+      "type": "end_action"
+    },
+    {
+      "type": "begin_action",
+      "name": "decrementIndex"
+    },
+    {
+      "type": "set_variable",
+      "name": "index",
+      "value": "@local.index - 1",
+      "parameter_list": "value_type: script"
+    },
+    {
+      "type": "end_action"
+    }
+  ]
+}
