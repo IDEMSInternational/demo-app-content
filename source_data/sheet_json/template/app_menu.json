@@ -1,0 +1,17 @@
+{
+  "flow_type": "template",
+  "flow_name": "app_menu",
+  "status": "released",
+  "rows": [
+    {
+      "type": "debug_toggle",
+      "name": "debug_toggle"
+    },
+    {
+      "type": "button",
+      "name": "button_reset",
+      "value": "Reset app",
+      "action_list": "click | reset_app"
+    }
+  ]
+}

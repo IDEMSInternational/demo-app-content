@@ -1,0 +1,56 @@
+{
+  "flow_type": "template",
+  "flow_name": "deep_nesting_child",
+  "status": "released",
+  "rows": [
+    {
+      "type": "divider",
+      "name": "divider_2",
+      "_nested_name": "divider_2"
+    },
+    {
+      "type": "text",
+      "name": "text1",
+      "value": "# Child",
+      "_translations": {
+        "value": {}
+      },
+      "_nested_name": "text1"
+    },
+    {
+      "type": "text",
+      "name": "text2",
+      "value": "This is the child template",
+      "_translations": {
+        "value": {}
+      },
+      "_nested_name": "text2"
+    },
+    {
+      "type": "text_box",
+      "name": "textbox1",
+      "value": "Child Textbox",
+      "_translations": {
+        "value": {}
+      },
+      "_nested_name": "textbox1"
+    },
+    {
+      "type": "template",
+      "name": "grandchild",
+      "value": "deep_nesting_grandchild",
+      "rows": [],
+      "_nested_name": "grandchild"
+    },
+    {
+      "type": "divider",
+      "name": "divider_8",
+      "_nested_name": "divider_8"
+    }
+  ],
+  "_source": {
+    "name": "12LHuYxe0rCUZ0Bsk8nx_ce59tVa-8vFL",
+    "path": "variables.xlsx",
+    "url": "https://docs.google.com/spreadsheets/d/1wZ6iCGIKcZzm2Bi7-uigVXIMGPwZxJmOHc2gf7ebrnI"
+  }
+}

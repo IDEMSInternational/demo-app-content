@@ -1,0 +1,130 @@
+{
+  "flow_type": "template",
+  "flow_name": "plh_parent_menu",
+  "status": "released",
+  "rows": [
+    {
+      "type": "query",
+      "name": "all_courses",
+      "parameter_list": "data_list: plh_courses"
+    },
+    {
+      "type": "query",
+      "name": "completed_courses",
+      "parameter_list": "data_list: plh_completed_log"
+    },
+    {
+      "type": "begin_loop",
+      "name": "completed",
+      "value": "local.all_courses",
+      "parameter_list": "index: id;\nvalue_type: script"
+    },
+    {
+      "type": "text",
+      "value": "@item.name"
+    },
+    {
+      "type": "query",
+      "name": "modules_in_course",
+      "value": "selector: {course_id: @item.id}",
+      "parameter_list": "data_list: plh_modules"
+    },
+    {
+      "type": "begin_loop",
+      "name": "this_module",
+      "value": "local.modules_in_course",
+      "parameter_list": "index: id;\nvalue_type: script"
+    },
+    {
+      "type": "button",
+      "value": "@item.name",
+      "action_list": "click | action: @local.navigate"
+    },
+    {
+      "type": "begin_action",
+      "name": "navigate"
+    },
+    {
+      "type": "begin_nav",
+      "name": "goToTargetNav",
+      "value": "plh_module_navigation"
+    },
+    {
+      "name": "title",
+      "value": "@item.name"
+    },
+    {
+      "name": "module_datalist",
+      "value": "@item.pages"
+    },
+    {
+      "type": "end_nav"
+    },
+    {
+      "type": "end_action"
+    },
+    {
+      "type": "end_loop"
+    },
+    {
+      "type": "end_loop"
+    },
+    {
+      "type": "begin_loop",
+      "name": "completed",
+      "value": "local.all_courses",
+      "parameter_list": "index: id;\nvalue_type: script",
+      "condition": false
+    },
+    {
+      "type": "text",
+      "value": "@item.name"
+    },
+    {
+      "type": "query",
+      "name": "modules_in_course",
+      "value": "selector: {course_id: @item.id}",
+      "parameter_list": "data_list: plh_modules"
+    },
+    {
+      "type": "begin_loop",
+      "name": "this_module",
+      "value": "local.modules_in_course",
+      "parameter_list": "index: id;\nvalue_type: script"
+    },
+    {
+      "type": "button",
+      "value": "@item.name",
+      "action_list": "click | action: @local.navigate"
+    },
+    {
+      "type": "begin_action",
+      "name": "navigate"
+    },
+    {
+      "type": "begin_nav",
+      "name": "goToTargetNav",
+      "value": "plh_module_navigation"
+    },
+    {
+      "name": "title",
+      "value": "@item.name"
+    },
+    {
+      "name": "module_datalist",
+      "value": "@item.pages"
+    },
+    {
+      "type": "end_nav"
+    },
+    {
+      "type": "end_action"
+    },
+    {
+      "type": "end_loop"
+    },
+    {
+      "type": "end_loop"
+    }
+  ]
+}

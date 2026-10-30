@@ -1,0 +1,28 @@
+{
+  "flow_type": "template",
+  "flow_name": "deep_nesting_grandchild",
+  "status": "released",
+  "rows": [
+    {
+      "type": "divider"
+    },
+    {
+      "type": "text",
+      "name": "text1",
+      "value": "# Grandchild"
+    },
+    {
+      "type": "text",
+      "name": "text2",
+      "value": "This is the grandchild template"
+    },
+    {
+      "type": "text_box",
+      "name": "textbox1",
+      "value": "Grandchild Textbox"
+    },
+    {
+      "type": "divider"
+    }
+  ]
+}

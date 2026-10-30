@@ -1,0 +1,425 @@
+{
+  "flow_type": "template",
+  "flow_name": "plh_parent_menu",
+  "status": "released",
+  "rows": [
+    {
+      "type": "query",
+      "name": "all_courses",
+      "parameter_list": {
+        "data_list": "plh_courses"
+      },
+      "_nested_name": "all_courses"
+    },
+    {
+      "type": "query",
+      "name": "completed_courses",
+      "parameter_list": {
+        "data_list": "plh_completed_log"
+      },
+      "_nested_name": "completed_courses"
+    },
+    {
+      "type": "loop",
+      "name": "completed",
+      "value": "local.all_courses",
+      "parameter_list": {
+        "index": "id",
+        "value_type": "script"
+      },
+      "rows": [
+        {
+          "type": "text",
+          "value": "@item.name",
+          "_translations": {
+            "value": {}
+          },
+          "name": "text_1",
+          "_nested_name": "completed.text_1",
+          "_dynamicFields": {
+            "value": [
+              {
+                "fullExpression": "@item.name",
+                "matchedExpression": "@item.name",
+                "type": "item",
+                "fieldName": "name"
+              }
+            ]
+          },
+          "_dynamicDependencies": {
+            "@item.name": [
+              "value"
+            ]
+          }
+        },
+        {
+          "type": "query",
+          "name": "modules_in_course",
+          "value": "selector: {course_id: @item.id}",
+          "_translations": {
+            "value": {}
+          },
+          "parameter_list": {
+            "data_list": "plh_modules"
+          },
+          "_nested_name": "completed.modules_in_course",
+          "_dynamicFields": {
+            "value": [
+              {
+                "fullExpression": "selector: {course_id: @item.id}",
+                "matchedExpression": "@item.id",
+                "type": "item",
+                "fieldName": "id"
+              }
+            ]
+          },
+          "_dynamicDependencies": {
+            "@item.id": [
+              "value"
+            ]
+          }
+        },
+        {
+          "type": "loop",
+          "name": "this_module",
+          "value": "local.modules_in_course",
+          "parameter_list": {
+            "index": "id",
+            "value_type": "script"
+          },
+          "rows": [
+            {
+              "type": "button",
+              "value": "@item.name",
+              "_translations": {
+                "value": {}
+              },
+              "action_list": [
+                {
+                  "trigger": "click",
+                  "action_id": "action",
+                  "args": [
+                    "@local.navigate"
+                  ],
+                  "_raw": "click | action: @local.navigate"
+                }
+              ],
+              "name": "button_1",
+              "_nested_name": "completed.this_module.button_1",
+              "_dynamicFields": {
+                "value": [
+                  {
+                    "fullExpression": "@item.name",
+                    "matchedExpression": "@item.name",
+                    "type": "item",
+                    "fieldName": "name"
+                  }
+                ],
+                "action_list": {
+                  "0": {
+                    "args": {
+                      "0": [
+                        {
+                          "fullExpression": "@local.navigate",
+                          "matchedExpression": "@local.navigate",
+                          "type": "local",
+                          "fieldName": "navigate"
+                        }
+                      ]
+                    },
+                    "_raw": [
+                      {
+                        "fullExpression": "click | action: @local.navigate",
+                        "matchedExpression": "@local.navigate",
+                        "type": "local",
+                        "fieldName": "navigate"
+                      }
+                    ]
+                  }
+                }
+              },
+              "_dynamicDependencies": {
+                "@item.name": [
+                  "value"
+                ],
+                "@local.navigate": [
+                  "action_list.0.args.0",
+                  "action_list.0._raw"
+                ]
+              }
+            },
+            {
+              "type": "action",
+              "name": "navigate",
+              "rows": [
+                {
+                  "type": "nav",
+                  "name": "goToTargetNav",
+                  "value": "plh_module_navigation",
+                  "rows": [
+                    {
+                      "name": "title",
+                      "value": "@item.name",
+                      "_translations": {
+                        "value": {}
+                      },
+                      "type": "set_variable",
+                      "_nested_name": "completed.this_module.navigate.goToTargetNav.title",
+                      "_dynamicFields": {
+                        "value": [
+                          {
+                            "fullExpression": "@item.name",
+                            "matchedExpression": "@item.name",
+                            "type": "item",
+                            "fieldName": "name"
+                          }
+                        ]
+                      },
+                      "_dynamicDependencies": {
+                        "@item.name": [
+                          "value"
+                        ]
+                      }
+                    },
+                    {
+                      "name": "module_datalist",
+                      "value": "@item.pages",
+                      "_translations": {
+                        "value": {}
+                      },
+                      "type": "set_variable",
+                      "_nested_name": "completed.this_module.navigate.goToTargetNav.module_datalist",
+                      "_dynamicFields": {
+                        "value": [
+                          {
+                            "fullExpression": "@item.pages",
+                            "matchedExpression": "@item.pages",
+                            "type": "item",
+                            "fieldName": "pages"
+                          }
+                        ]
+                      },
+                      "_dynamicDependencies": {
+                        "@item.pages": [
+                          "value"
+                        ]
+                      }
+                    }
+                  ],
+                  "_nested_name": "completed.this_module.navigate.goToTargetNav"
+                }
+              ],
+              "_nested_name": "completed.this_module.navigate"
+            }
+          ],
+          "_nested_name": "completed.this_module"
+        }
+      ],
+      "_nested_name": "completed"
+    },
+    {
+      "type": "loop",
+      "name": "completed",
+      "value": "local.all_courses",
+      "parameter_list": {
+        "index": "id",
+        "value_type": "script"
+      },
+      "condition": false,
+      "rows": [
+        {
+          "type": "text",
+          "value": "@item.name",
+          "_translations": {
+            "value": {}
+          },
+          "name": "text_1",
+          "_nested_name": "completed.text_1",
+          "_dynamicFields": {
+            "value": [
+              {
+                "fullExpression": "@item.name",
+                "matchedExpression": "@item.name",
+                "type": "item",
+                "fieldName": "name"
+              }
+            ]
+          },
+          "_dynamicDependencies": {
+            "@item.name": [
+              "value"
+            ]
+          }
+        },
+        {
+          "type": "query",
+          "name": "modules_in_course",
+          "value": "selector: {course_id: @item.id}",
+          "_translations": {
+            "value": {}
+          },
+          "parameter_list": {
+            "data_list": "plh_modules"
+          },
+          "_nested_name": "completed.modules_in_course",
+          "_dynamicFields": {
+            "value": [
+              {
+                "fullExpression": "selector: {course_id: @item.id}",
+                "matchedExpression": "@item.id",
+                "type": "item",
+                "fieldName": "id"
+              }
+            ]
+          },
+          "_dynamicDependencies": {
+            "@item.id": [
+              "value"
+            ]
+          }
+        },
+        {
+          "type": "loop",
+          "name": "this_module",
+          "value": "local.modules_in_course",
+          "parameter_list": {
+            "index": "id",
+            "value_type": "script"
+          },
+          "rows": [
+            {
+              "type": "button",
+              "value": "@item.name",
+              "_translations": {
+                "value": {}
+              },
+              "action_list": [
+                {
+                  "trigger": "click",
+                  "action_id": "action",
+                  "args": [
+                    "@local.navigate"
+                  ],
+                  "_raw": "click | action: @local.navigate"
+                }
+              ],
+              "name": "button_1",
+              "_nested_name": "completed.this_module.button_1",
+              "_dynamicFields": {
+                "value": [
+                  {
+                    "fullExpression": "@item.name",
+                    "matchedExpression": "@item.name",
+                    "type": "item",
+                    "fieldName": "name"
+                  }
+                ],
+                "action_list": {
+                  "0": {
+                    "args": {
+                      "0": [
+                        {
+                          "fullExpression": "@local.navigate",
+                          "matchedExpression": "@local.navigate",
+                          "type": "local",
+                          "fieldName": "navigate"
+                        }
+                      ]
+                    },
+                    "_raw": [
+                      {
+                        "fullExpression": "click | action: @local.navigate",
+                        "matchedExpression": "@local.navigate",
+                        "type": "local",
+                        "fieldName": "navigate"
+                      }
+                    ]
+                  }
+                }
+              },
+              "_dynamicDependencies": {
+                "@item.name": [
+                  "value"
+                ],
+                "@local.navigate": [
+                  "action_list.0.args.0",
+                  "action_list.0._raw"
+                ]
+              }
+            },
+            {
+              "type": "action",
+              "name": "navigate",
+              "rows": [
+                {
+                  "type": "nav",
+                  "name": "goToTargetNav",
+                  "value": "plh_module_navigation",
+                  "rows": [
+                    {
+                      "name": "title",
+                      "value": "@item.name",
+                      "_translations": {
+                        "value": {}
+                      },
+                      "type": "set_variable",
+                      "_nested_name": "completed.this_module.navigate.goToTargetNav.title",
+                      "_dynamicFields": {
+                        "value": [
+                          {
+                            "fullExpression": "@item.name",
+                            "matchedExpression": "@item.name",
+                            "type": "item",
+                            "fieldName": "name"
+                          }
+                        ]
+                      },
+                      "_dynamicDependencies": {
+                        "@item.name": [
+                          "value"
+                        ]
+                      }
+                    },
+                    {
+                      "name": "module_datalist",
+                      "value": "@item.pages",
+                      "_translations": {
+                        "value": {}
+                      },
+                      "type": "set_variable",
+                      "_nested_name": "completed.this_module.navigate.goToTargetNav.module_datalist",
+                      "_dynamicFields": {
+                        "value": [
+                          {
+                            "fullExpression": "@item.pages",
+                            "matchedExpression": "@item.pages",
+                            "type": "item",
+                            "fieldName": "pages"
+                          }
+                        ]
+                      },
+                      "_dynamicDependencies": {
+                        "@item.pages": [
+                          "value"
+                        ]
+                      }
+                    }
+                  ],
+                  "_nested_name": "completed.this_module.navigate.goToTargetNav"
+                }
+              ],
+              "_nested_name": "completed.this_module.navigate"
+            }
+          ],
+          "_nested_name": "completed.this_module"
+        }
+      ],
+      "_nested_name": "completed"
+    }
+  ],
+  "_source": {
+    "name": "12LHuYxe0rCUZ0Bsk8nx_ce59tVa-8vFL",
+    "path": "PLH Screens .xlsx",
+    "url": "https://docs.google.com/spreadsheets/d/1ujUfyP3UWQ_3oo76AH8f-BQdCTtsE_7yTsYskAE_eRU"
+  }
+}

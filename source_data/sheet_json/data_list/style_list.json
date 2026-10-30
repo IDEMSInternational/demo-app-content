@@ -1,0 +1,14 @@
+{
+  "flow_type": "data_list",
+  "flow_name": "style_list",
+  "status": "released",
+  "rows": [
+    {
+      "id": "information",
+      "value": "information",
+      "name": "information",
+      "component_list": "button",
+      "description": "TO DO"
+    }
+  ]
+}

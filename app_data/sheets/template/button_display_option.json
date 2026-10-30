@@ -1,0 +1,69 @@
+{
+  "flow_type": "template",
+  "flow_name": "button_display_option",
+  "status": "released",
+  "rows": [
+    {
+      "name": "option_list",
+      "type": "set_variable",
+      "_nested_name": "option_list"
+    },
+    {
+      "type": "query",
+      "name": "dropdown_options",
+      "parameter_list": {
+        "data_list": "@local.option_list"
+      },
+      "_nested_name": "dropdown_options",
+      "_dynamicFields": {
+        "parameter_list": {
+          "data_list": [
+            {
+              "fullExpression": "@local.option_list",
+              "matchedExpression": "@local.option_list",
+              "type": "local",
+              "fieldName": "option_list"
+            }
+          ]
+        }
+      },
+      "_dynamicDependencies": {
+        "@local.option_list": [
+          "parameter_list.data_list"
+        ]
+      }
+    },
+    {
+      "type": "dropdown",
+      "parameter_list": {
+        "options": "@local.dropdown_options",
+        "options_key": "value",
+        "options_value": "name"
+      },
+      "name": "dropdown_4",
+      "_nested_name": "dropdown_4",
+      "_dynamicFields": {
+        "parameter_list": {
+          "options": [
+            {
+              "fullExpression": "@local.dropdown_options",
+              "matchedExpression": "@local.dropdown_options",
+              "type": "local",
+              "fieldName": "dropdown_options"
+            }
+          ]
+        }
+      },
+      "_dynamicDependencies": {
+        "@local.dropdown_options": [
+          "parameter_list.options"
+        ]
+      }
+    }
+  ],
+  "_source": {
+    "name": "12LHuYxe0rCUZ0Bsk8nx_ce59tVa-8vFL",
+    "path": "Components.xlsx",
+    "url": "https://docs.google.com/spreadsheets/d/1yRizub7Rcfnz3hGdzDz7Quczv4yoxihBroIoXkJg-LA"
+  }
+}

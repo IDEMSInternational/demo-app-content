@@ -1,0 +1,31 @@
+{
+  "flow_type": "template",
+  "flow_name": "plh_screens",
+  "status": "released",
+  "rows": [
+    {
+      "type": "title",
+      "value": "PLH Screens"
+    },
+    {
+      "type": "button",
+      "value": "Parent Menu",
+      "action_list": "click | go_to : plh_parent_menu"
+    },
+    {
+      "type": "button",
+      "value": "Library Menu",
+      "action_list": "click | go_to : plh_library_menu"
+    },
+    {
+      "type": "button",
+      "value": "Settings Menu",
+      "action_list": "click | go_to : plh_settings_menu"
+    },
+    {
+      "type": "button",
+      "value": "Module Navigation",
+      "action_list": "click | go_to : plh_module_navigation"
+    }
+  ]
+}

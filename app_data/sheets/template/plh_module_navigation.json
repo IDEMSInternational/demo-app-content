@@ -1,0 +1,268 @@
+{
+  "flow_type": "template",
+  "flow_name": "plh_module_navigation",
+  "status": "released",
+  "rows": [
+    {
+      "name": "title",
+      "value": "To be overwritten",
+      "_translations": {
+        "value": {}
+      },
+      "type": "set_variable",
+      "_nested_name": "title"
+    },
+    {
+      "name": "module_datalist",
+      "type": "set_variable",
+      "_nested_name": "module_datalist"
+    },
+    {
+      "name": "index",
+      "value": 0,
+      "type": "set_variable",
+      "_nested_name": "index"
+    },
+    {
+      "type": "query",
+      "name": "all_pages",
+      "parameter_list": {
+        "data_list": "@local.module_datalist"
+      },
+      "_nested_name": "all_pages",
+      "_dynamicFields": {
+        "parameter_list": {
+          "data_list": [
+            {
+              "fullExpression": "@local.module_datalist",
+              "matchedExpression": "@local.module_datalist",
+              "type": "local",
+              "fieldName": "module_datalist"
+            }
+          ]
+        }
+      },
+      "_dynamicDependencies": {
+        "@local.module_datalist": [
+          "parameter_list.data_list"
+        ]
+      }
+    },
+    {
+      "type": "loop",
+      "name": "completed",
+      "value": "local.all_pages",
+      "parameter_list": {
+        "index": "id",
+        "value_type": "script"
+      },
+      "rows": [
+        {
+          "type": "template",
+          "value": "plh_module_page",
+          "condition": "@loop.index == @local.index",
+          "rows": [
+            {
+              "name": "page_details",
+              "value": "@item",
+              "_translations": {
+                "value": {}
+              },
+              "type": "set_variable",
+              "_nested_name": "completed.plh_module_page.page_details"
+            }
+          ],
+          "name": "plh_module_page",
+          "_nested_name": "completed.plh_module_page",
+          "_dynamicFields": {
+            "condition": [
+              {
+                "fullExpression": "@loop.index == @local.index",
+                "matchedExpression": "@local.index",
+                "type": "local",
+                "fieldName": "index"
+              }
+            ]
+          },
+          "_dynamicDependencies": {
+            "@local.index": [
+              "condition"
+            ]
+          }
+        }
+      ],
+      "_nested_name": "completed"
+    },
+    {
+      "type": "button",
+      "value": "back",
+      "_translations": {
+        "value": {}
+      },
+      "action_list": [
+        {
+          "trigger": "click",
+          "action_id": "action",
+          "args": [
+            "@local.decrementIndex"
+          ],
+          "_raw": "click | action: @local.decrementIndex"
+        }
+      ],
+      "name": "button_8",
+      "_nested_name": "button_8",
+      "_dynamicFields": {
+        "action_list": {
+          "0": {
+            "args": {
+              "0": [
+                {
+                  "fullExpression": "@local.decrementIndex",
+                  "matchedExpression": "@local.decrementIndex",
+                  "type": "local",
+                  "fieldName": "decrementIndex"
+                }
+              ]
+            },
+            "_raw": [
+              {
+                "fullExpression": "click | action: @local.decrementIndex",
+                "matchedExpression": "@local.decrementIndex",
+                "type": "local",
+                "fieldName": "decrementIndex"
+              }
+            ]
+          }
+        }
+      },
+      "_dynamicDependencies": {
+        "@local.decrementIndex": [
+          "action_list.0.args.0",
+          "action_list.0._raw"
+        ]
+      }
+    },
+    {
+      "type": "button",
+      "value": "forward",
+      "_translations": {
+        "value": {}
+      },
+      "action_list": [
+        {
+          "trigger": "click",
+          "action_id": "action",
+          "args": [
+            "@local.incrementIndex"
+          ],
+          "_raw": "click | action: @local.incrementIndex"
+        }
+      ],
+      "name": "button_9",
+      "_nested_name": "button_9",
+      "_dynamicFields": {
+        "action_list": {
+          "0": {
+            "args": {
+              "0": [
+                {
+                  "fullExpression": "@local.incrementIndex",
+                  "matchedExpression": "@local.incrementIndex",
+                  "type": "local",
+                  "fieldName": "incrementIndex"
+                }
+              ]
+            },
+            "_raw": [
+              {
+                "fullExpression": "click | action: @local.incrementIndex",
+                "matchedExpression": "@local.incrementIndex",
+                "type": "local",
+                "fieldName": "incrementIndex"
+              }
+            ]
+          }
+        }
+      },
+      "_dynamicDependencies": {
+        "@local.incrementIndex": [
+          "action_list.0.args.0",
+          "action_list.0._raw"
+        ]
+      }
+    },
+    {
+      "type": "action",
+      "name": "incrementIndex",
+      "rows": [
+        {
+          "type": "set_variable",
+          "name": "index",
+          "value": "@local.index+ 1",
+          "_translations": {
+            "value": {}
+          },
+          "parameter_list": {
+            "value_type": "script"
+          },
+          "_nested_name": "incrementIndex.index",
+          "_dynamicFields": {
+            "value": [
+              {
+                "fullExpression": "@local.index+ 1",
+                "matchedExpression": "@local.index",
+                "type": "local",
+                "fieldName": "index"
+              }
+            ]
+          },
+          "_dynamicDependencies": {
+            "@local.index": [
+              "value"
+            ]
+          }
+        }
+      ],
+      "_nested_name": "incrementIndex"
+    },
+    {
+      "type": "action",
+      "name": "decrementIndex",
+      "rows": [
+        {
+          "type": "set_variable",
+          "name": "index",
+          "value": "@local.index - 1",
+          "_translations": {
+            "value": {}
+          },
+          "parameter_list": {
+            "value_type": "script"
+          },
+          "_nested_name": "decrementIndex.index",
+          "_dynamicFields": {
+            "value": [
+              {
+                "fullExpression": "@local.index - 1",
+                "matchedExpression": "@local.index",
+                "type": "local",
+                "fieldName": "index"
+              }
+            ]
+          },
+          "_dynamicDependencies": {
+            "@local.index": [
+              "value"
+            ]
+          }
+        }
+      ],
+      "_nested_name": "decrementIndex"
+    }
+  ],
+  "_source": {
+    "name": "12LHuYxe0rCUZ0Bsk8nx_ce59tVa-8vFL",
+    "path": "PLH Screens .xlsx",
+    "url": "https://docs.google.com/spreadsheets/d/1ujUfyP3UWQ_3oo76AH8f-BQdCTtsE_7yTsYskAE_eRU"
+  }
+}

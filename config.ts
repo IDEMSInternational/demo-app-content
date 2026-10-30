@@ -3,7 +3,7 @@ const config = generateDeploymentConfig("demo")
 
 config.git = {
   content_repo: "https://github.com/IDEMSInternational/demo-app-content",
-  content_tag_latest: "1.0.3",
+  content_tag_latest: "1.0.5",
 }
 
 config.google_drive = {

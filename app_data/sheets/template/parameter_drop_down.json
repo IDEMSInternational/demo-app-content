@@ -1,0 +1,111 @@
+{
+  "flow_type": "template",
+  "flow_name": "parameter_drop_down",
+  "status": "released",
+  "rows": [
+    {
+      "name": "name",
+      "type": "set_variable",
+      "_nested_name": "name"
+    },
+    {
+      "name": "options",
+      "type": "set_variable",
+      "_nested_name": "options"
+    },
+    {
+      "name": "filter",
+      "type": "set_variable",
+      "_nested_name": "filter"
+    },
+    {
+      "name": "default",
+      "type": "set_variable",
+      "_nested_name": "default"
+    },
+    {
+      "name": "description",
+      "type": "set_variable",
+      "_nested_name": "description"
+    },
+    {
+      "type": "query",
+      "name": "options_query",
+      "parameter_list": {
+        "data_list": "@local.options"
+      },
+      "_nested_name": "options_query",
+      "_dynamicFields": {
+        "parameter_list": {
+          "data_list": [
+            {
+              "fullExpression": "@local.options",
+              "matchedExpression": "@local.options",
+              "type": "local",
+              "fieldName": "options"
+            }
+          ]
+        }
+      },
+      "_dynamicDependencies": {
+        "@local.options": [
+          "parameter_list.data_list"
+        ]
+      }
+    },
+    {
+      "type": "title",
+      "name": "parameter_name",
+      "value": "${local.name}",
+      "_translations": {
+        "value": {}
+      },
+      "_nested_name": "parameter_name"
+    },
+    {
+      "type": "text",
+      "name": "description",
+      "value": "${local.description}",
+      "_translations": {
+        "value": {}
+      },
+      "_nested_name": "description"
+    },
+    {
+      "type": "dropdown",
+      "name": "selected",
+      "value": "${local.default}",
+      "_translations": {
+        "value": {}
+      },
+      "parameter_list": {
+        "options": "@local.options_query",
+        "options_key": "id",
+        "options_value": "value"
+      },
+      "_nested_name": "selected",
+      "_dynamicFields": {
+        "parameter_list": {
+          "options": [
+            {
+              "fullExpression": "@local.options_query",
+              "matchedExpression": "@local.options_query",
+              "type": "local",
+              "fieldName": "options_query"
+            }
+          ]
+        }
+      },
+      "_dynamicDependencies": {
+        "@local.options_query": [
+          "parameter_list.options"
+        ]
+      }
+    }
+  ],
+  "_source": {
+    "name": "12LHuYxe0rCUZ0Bsk8nx_ce59tVa-8vFL",
+    "path": "Components.xlsx",
+    "url": "https://docs.google.com/spreadsheets/d/1yRizub7Rcfnz3hGdzDz7Quczv4yoxihBroIoXkJg-LA"
+  }
+}

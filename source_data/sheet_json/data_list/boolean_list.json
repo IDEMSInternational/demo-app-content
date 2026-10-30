@@ -1,0 +1,19 @@
+{
+  "flow_type": "data_list",
+  "flow_name": "boolean_list",
+  "status": "released",
+  "rows": [
+    {
+      "id": "id_1",
+      "value": true,
+      "name": true,
+      "description": "is true"
+    },
+    {
+      "id": "id_0",
+      "value": false,
+      "name": false,
+      "description": "is false"
+    }
+  ]
+}

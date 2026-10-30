@@ -1,0 +1,137 @@
+{
+  "flow_type": "template",
+  "flow_name": "basic_form",
+  "status": "released",
+  "language": "en_gb",
+  "rows": [
+    {
+      "type": "title",
+      "value": "Basic Form"
+    },
+    {
+      "type": "query",
+      "name": "all_questions",
+      "parameter_list": "data_list: basic_questions"
+    },
+    {
+      "type": "begin_loop",
+      "name": "all_questions_loop",
+      "value": "local.all_questions",
+      "parameter_list": "index: id;\nvalue_type: script"
+    },
+    {
+      "type": "begin_template",
+      "name": "question_template",
+      "value": "question",
+      "comments": "Can I pass a row of data here?"
+    },
+    {
+      "name": "question",
+      "value": "${item.question}"
+    },
+    {
+      "name": "type",
+      "value": "${item.type}"
+    },
+    {
+      "name": "list_name",
+      "value": "${item.list_name}"
+    },
+    {
+      "name": "validation",
+      "value": "${item.validation}"
+    },
+    {
+      "name": "required",
+      "value": "${item.required}"
+    },
+    {
+      "name": "placeholder",
+      "value": "${item.placeholder}"
+    },
+    {
+      "type": "end_template"
+    },
+    {
+      "type": "end_loop"
+    },
+    {
+      "type": "button",
+      "value": "submit wide format",
+      "action_list": "click | action: @local.add_to_db_wide"
+    },
+    {
+      "type": "button",
+      "value": "submit long format",
+      "action_list": "click | action: @local.add_to_db_long"
+    },
+    {
+      "type": "begin_action",
+      "name": "add_to_db_long",
+      "comments": "{id, question_id, question_value}"
+    },
+    {
+      "type": "begin_loop",
+      "name": "all_answers_loop_long",
+      "value": "local.all_questions",
+      "parameter_list": "index: id;\nvalue_type: script"
+    },
+    {
+      "name": "this_id",
+      "value": "crypto.randomUUID()",
+      "parameter_list": "value_type: script"
+    },
+    {
+      "name": "this_value",
+      "value": "local.all_questions_loop[item.id].question_template.value",
+      "parameter_list": "value_type: script"
+    },
+    {
+      "type": "update",
+      "name": "insertRow",
+      "value": "id: local.this_id,\nname: item.id,\nvalue: local.this_value",
+      "parameter_list": "data_list: basic_result;\nvalue_type: script"
+    },
+    {
+      "type": "end_loop"
+    },
+    {
+      "type": "end_action"
+    },
+    {
+      "type": "begin_action",
+      "name": "add_to_db_wide",
+      "comments": "{id, question_1_value, question_2_value, question_3_value, ...}"
+    },
+    {
+      "name": "this_id",
+      "value": "crypto.randomUUID()",
+      "parameter_list": "value_type: script;"
+    },
+    {
+      "type": "expression_builder",
+      "name": "query_builder",
+      "value": "${item.id}: \"${local.all_questions_loop[item.id].question_template.value}\",",
+      "parameter_list": "loop: @local.all_questions;\ninitial_value: \"\";"
+    },
+    {
+      "type": "update",
+      "name": "insertRow",
+      "value": "id: \"${local.this_id}\",\n${local.query_builder}",
+      "parameter_list": "data_list: basic_result;\nvalue_type: string;"
+    },
+    {
+      "type": "end_action"
+    },
+    {
+      "type": "expression_builder",
+      "name": "test_query",
+      "value": "${item.id}: \"${local.all_questions_loop[item.id].question_template.value}\",",
+      "parameter_list": "loop: @local.all_questions;\ninitial_value: \"\";"
+    },
+    {
+      "type": "text",
+      "value": "@local.test_query"
+    }
+  ]
+}

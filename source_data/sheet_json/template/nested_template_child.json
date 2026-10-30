@@ -1,0 +1,48 @@
+{
+  "flow_type": "template",
+  "flow_name": "nested_template_child",
+  "status": "released",
+  "rows": [
+    {
+      "type": "divider"
+    },
+    {
+      "type": "text",
+      "name": "text1",
+      "value": "Child Text 1"
+    },
+    {
+      "type": "text",
+      "name": "child_text",
+      "value": "Child Template"
+    },
+    {
+      "type": "text",
+      "name": "text2",
+      "value": "# Updates Parent"
+    },
+    {
+      "type": "text_box",
+      "name": "textbox1",
+      "value": "\"\""
+    },
+    {
+      "type": "text ",
+      "name": "text3",
+      "value": "# Updates Child"
+    },
+    {
+      "type": "text_box",
+      "name": "childTextbox",
+      "value": "\"\""
+    },
+    {
+      "type": "text",
+      "name": "childTextboxValue",
+      "value": "@local.childTextbox"
+    },
+    {
+      "type": "divider"
+    }
+  ]
+}

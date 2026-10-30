@@ -1,0 +1,32 @@
+{
+  "flow_type": "data_list",
+  "flow_name": "boolean_list",
+  "status": "released",
+  "rows": [
+    {
+      "id": "id_1",
+      "value": true,
+      "name": true,
+      "description": "is true"
+    },
+    {
+      "id": "id_0",
+      "value": false,
+      "name": false,
+      "description": "is false"
+    }
+  ],
+  "_source": {
+    "name": "12LHuYxe0rCUZ0Bsk8nx_ce59tVa-8vFL",
+    "path": "Components.xlsx",
+    "url": "https://docs.google.com/spreadsheets/d/1yRizub7Rcfnz3hGdzDz7Quczv4yoxihBroIoXkJg-LA"
+  },
+  "_metadata": {
+    "value": {
+      "type": "boolean"
+    },
+    "name": {
+      "type": "boolean"
+    }
+  }
+}

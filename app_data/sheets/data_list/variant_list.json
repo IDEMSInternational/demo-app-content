@@ -1,0 +1,120 @@
+{
+  "flow_type": "data_list",
+  "flow_name": "variant_list",
+  "status": "released",
+  "rows": [
+    {
+      "id": "default",
+      "value": "default",
+      "name": "default",
+      "component_list": [
+        "button"
+      ],
+      "description": "TO DO"
+    },
+    {
+      "id": "alternative",
+      "value": "alternative",
+      "name": "alternative",
+      "component_list": [
+        "button"
+      ],
+      "description": "TO DO"
+    },
+    {
+      "id": "card",
+      "value": "card",
+      "name": "card",
+      "component_list": [
+        "button"
+      ],
+      "description": "TO DO"
+    },
+    {
+      "id": "card-portrait",
+      "value": "card-portrait",
+      "name": "card-portrait",
+      "component_list": [
+        "button"
+      ],
+      "description": "TO DO"
+    },
+    {
+      "id": "flexible",
+      "value": "flexible",
+      "name": "flexible",
+      "component_list": [
+        "button"
+      ],
+      "description": "TO DO"
+    },
+    {
+      "id": "full",
+      "value": "full",
+      "name": "full",
+      "component_list": [
+        "button"
+      ],
+      "description": "TO DO"
+    },
+    {
+      "id": "information",
+      "value": "information",
+      "name": "information",
+      "component_list": [
+        "button"
+      ],
+      "description": "TO DO"
+    },
+    {
+      "id": "medium",
+      "value": "medium",
+      "name": "medium",
+      "component_list": [
+        "button"
+      ],
+      "description": "TO DO"
+    },
+    {
+      "id": "navigation",
+      "value": "navigation",
+      "name": "navigation",
+      "component_list": [
+        "button"
+      ],
+      "description": "TO DO"
+    },
+    {
+      "id": "short",
+      "value": "short",
+      "name": "short",
+      "component_list": [
+        "button"
+      ],
+      "description": "TO DO"
+    },
+    {
+      "id": "standard",
+      "value": "standard",
+      "name": "standard",
+      "component_list": [
+        "button"
+      ],
+      "description": "TO DO"
+    },
+    {
+      "id": "tall",
+      "value": "tall",
+      "name": "tall",
+      "component_list": [
+        "button"
+      ],
+      "description": "TO DO"
+    }
+  ],
+  "_source": {
+    "name": "12LHuYxe0rCUZ0Bsk8nx_ce59tVa-8vFL",
+    "path": "Components.xlsx",
+    "url": "https://docs.google.com/spreadsheets/d/1yRizub7Rcfnz3hGdzDz7Quczv4yoxihBroIoXkJg-LA"
+  }
+}

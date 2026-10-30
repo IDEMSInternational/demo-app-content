@@ -1,0 +1,19 @@
+{
+  "flow_type": "data_list",
+  "flow_name": "plh_courses",
+  "status": "released",
+  "rows": [
+    {
+      "id": "course_1",
+      "name": "course 1"
+    },
+    {
+      "id": "course_2",
+      "name": "course 2"
+    },
+    {
+      "id": "course_3",
+      "name": "course 3"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "flow_type": "data_list",
+  "flow_name": "components",
+  "status": "released",
+  "rows": [
+    {
+      "id": "button",
+      "component": "button",
+      "option_list": [
+        "button_options"
+      ],
+      "template": "button_template",
+      "description": "This is a button",
+      "available_actions": "click;"
+    }
+  ],
+  "_source": {
+    "name": "12LHuYxe0rCUZ0Bsk8nx_ce59tVa-8vFL",
+    "path": "Components.xlsx",
+    "url": "https://docs.google.com/spreadsheets/d/1yRizub7Rcfnz3hGdzDz7Quczv4yoxihBroIoXkJg-LA"
+  }
+}

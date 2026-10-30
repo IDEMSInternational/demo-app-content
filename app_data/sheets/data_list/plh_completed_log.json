@@ -1,0 +1,52 @@
+{
+  "flow_type": "data_list",
+  "flow_name": "plh_completed_log",
+  "status": "released",
+  "rows": [
+    {
+      "id": "random_1",
+      "module_id": "module_1",
+      "timestamp": 38986
+    },
+    {
+      "id": "random_2",
+      "module_id": "module_2",
+      "timestamp": 38987
+    },
+    {
+      "id": "random_3",
+      "module_id": "module_3",
+      "timestamp": 38988
+    },
+    {
+      "id": "random_4",
+      "module_id": "module_4",
+      "timestamp": 38989
+    },
+    {
+      "id": "random_5",
+      "module_id": "module_5",
+      "timestamp": 38990
+    },
+    {
+      "id": "random_6",
+      "module_id": "module_6",
+      "timestamp": 38991
+    },
+    {
+      "id": "random_7",
+      "course_id": "course_1",
+      "timestamp": 38992
+    }
+  ],
+  "_source": {
+    "name": "12LHuYxe0rCUZ0Bsk8nx_ce59tVa-8vFL",
+    "path": "PLH Screens .xlsx",
+    "url": "https://docs.google.com/spreadsheets/d/1ujUfyP3UWQ_3oo76AH8f-BQdCTtsE_7yTsYskAE_eRU"
+  },
+  "_metadata": {
+    "timestamp": {
+      "type": "number"
+    }
+  }
+}

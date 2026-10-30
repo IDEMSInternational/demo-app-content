@@ -1,0 +1,70 @@
+{
+  "flow_type": "template",
+  "flow_name": "selected_options",
+  "status": "released",
+  "rows": [
+    {
+      "name": "component_row",
+      "condition": "This should be a value brought in"
+    },
+    {
+      "name": "option_list",
+      "value": "@local.component_row.option_list"
+    },
+    {
+      "name": "template",
+      "value": "@local.component_row.template"
+    },
+    {
+      "name": "style"
+    },
+    {
+      "name": "variant"
+    },
+    {
+      "name": "display_text"
+    },
+    {
+      "type": "select",
+      "value": "@data.@local.option_list"
+    },
+    {
+      "type": "begin_loop"
+    },
+    {
+      "type": "text",
+      "value": "@item.parameter"
+    },
+    {
+      "type": "combo_box",
+      "action_list": "change | set_local | @item.parameter : this.value;\nchange | set_local | parameter_free : this.value",
+      "parameter_list": "list: @item.option_list"
+    },
+    {
+      "type": "text_box",
+      "name": "parameter_free",
+      "action_list": "change | set_local | @item.parameter : this.value"
+    },
+    {
+      "type": "end_loop"
+    },
+    {
+      "type": "begin_template"
+    },
+    {
+      "name": "style",
+      "value": "@local.style"
+    },
+    {
+      "name": "variant",
+      "value": "@local.variant"
+    },
+    {
+      "name": "display_text",
+      "value": "@local.display_text"
+    },
+    {
+      "type": "end_template"
+    }
+  ]
+}

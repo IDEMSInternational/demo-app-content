@@ -1,0 +1,42 @@
+{
+  "flow_type": "template",
+  "flow_name": "textbox_question",
+  "status": "released",
+  "rows": [
+    {
+      "name": "placeholder",
+      "type": "set_variable",
+      "_nested_name": "placeholder"
+    },
+    {
+      "type": "text_box",
+      "name": "value",
+      "parameter_list": {
+        "placeholder": "@local.placeholder"
+      },
+      "_nested_name": "value",
+      "_dynamicFields": {
+        "parameter_list": {
+          "placeholder": [
+            {
+              "fullExpression": "@local.placeholder",
+              "matchedExpression": "@local.placeholder",
+              "type": "local",
+              "fieldName": "placeholder"
+            }
+          ]
+        }
+      },
+      "_dynamicDependencies": {
+        "@local.placeholder": [
+          "parameter_list.placeholder"
+        ]
+      }
+    }
+  ],
+  "_source": {
+    "name": "12LHuYxe0rCUZ0Bsk8nx_ce59tVa-8vFL",
+    "path": "Forms.xlsx",
+    "url": "https://docs.google.com/spreadsheets/d/1l6oX3c3s6UcdrpEvmMjjPe7mYCFkhfZAQo0yS9GfxhQ"
+  }
+}

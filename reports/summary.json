@@ -2,7 +2,15 @@
   "template_components": {
     "data": [
       {
+        "type": "action",
+        "count": 7
+      },
+      {
         "type": "button",
+        "count": 16
+      },
+      {
+        "type": "combo_box",
         "count": 1
       },
       {
@@ -10,25 +18,81 @@
         "count": 1
       },
       {
-        "type": "set_variable",
+        "type": "divider",
+        "count": 6
+      },
+      {
+        "type": "dropdown",
+        "count": 3
+      },
+      {
+        "type": "expression_builder",
+        "count": 2
+      },
+      {
+        "type": "loop",
+        "count": 10
+      },
+      {
+        "type": "nav",
+        "count": 3
+      },
+      {
+        "type": "query",
+        "count": 10
+      },
+      {
+        "type": "select",
         "count": 1
+      },
+      {
+        "type": "set_variable",
+        "count": 109
+      },
+      {
+        "type": "template",
+        "count": 19
       },
       {
         "type": "text",
-        "count": 4
+        "count": 33
       },
       {
         "type": "text_box",
-        "count": 1
+        "count": 10
       },
       {
         "type": "title",
+        "count": 7
+      },
+      {
+        "type": "toggle_bar",
         "count": 1
+      },
+      {
+        "type": "update",
+        "count": 2
+      },
+      {
+        "type": "variable_store_debugger",
+        "count": 2
       }
     ]
   },
   "template_actions": {
     "data": [
+      {
+        "type": "action",
+        "count": 7
+      },
+      {
+        "type": "change",
+        "count": 3
+      },
+      {
+        "type": "go_to",
+        "count": 7
+      },
       {
         "type": "reset_app",
         "count": 1
@@ -66,9 +130,14 @@
   "flows_by_type": {
     "data": [
       {
+        "type": "data_list",
+        "subtype": null,
+        "total": 14
+      },
+      {
         "type": "template",
         "subtype": null,
-        "total": 3
+        "total": 25
       }
     ]
   }

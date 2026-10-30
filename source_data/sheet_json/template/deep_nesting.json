@@ -1,0 +1,55 @@
+{
+  "flow_type": "template",
+  "flow_name": "deep_nesting",
+  "status": "released",
+  "rows": [
+    {
+      "type": "text",
+      "name": "text1",
+      "value": "# Parent"
+    },
+    {
+      "type": "text",
+      "name": "text2",
+      "value": "This is the parent template"
+    },
+    {
+      "type": "text",
+      "name": "text3",
+      "value": "Child Value: @local.child.textbox1"
+    },
+    {
+      "type": "text",
+      "name": "text4",
+      "value": "Grandchild Value: @local.child.grandchild.textbox1"
+    },
+    {
+      "type": "begin_template",
+      "name": "child",
+      "value": "deep_nesting_child"
+    },
+    {
+      "type": "end_template"
+    },
+    {
+      "type": "variable_store_debugger",
+      "name": "loop1"
+    },
+    {
+      "type": "begin_loop",
+      "name": "loopBox"
+    },
+    {
+      "type": "text_box",
+      "name": "@local.loopBox"
+    },
+    {
+      "type": "text",
+      "name": "@local.text1_"
+    },
+    {
+      "type": "end_loop",
+      "name": "@local.loop1.1.loopBox"
+    }
+  ]
+}

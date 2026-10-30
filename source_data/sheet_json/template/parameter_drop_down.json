@@ -1,0 +1,44 @@
+{
+  "flow_type": "template",
+  "flow_name": "parameter_drop_down",
+  "status": "released",
+  "rows": [
+    {
+      "name": "name"
+    },
+    {
+      "name": "options"
+    },
+    {
+      "name": "filter"
+    },
+    {
+      "name": "default"
+    },
+    {
+      "name": "description"
+    },
+    {
+      "type": "query",
+      "name": "options_query",
+      "parameter_list": "data_list: @local.options;",
+      "comments": "filter to be added"
+    },
+    {
+      "type": "title",
+      "name": "parameter_name",
+      "value": "${local.name}"
+    },
+    {
+      "type": "text",
+      "name": "description",
+      "value": "${local.description}"
+    },
+    {
+      "type": "dropdown",
+      "name": "selected",
+      "value": "${local.default}",
+      "parameter_list": "options: @local.options_query;\noptions_key: id;\noptions_value: value;"
+    }
+  ]
+}

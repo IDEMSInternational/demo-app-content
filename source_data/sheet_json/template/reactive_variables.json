@@ -1,0 +1,50 @@
+{
+  "flow_type": "template",
+  "flow_name": "reactive_variables",
+  "status": "released",
+  "rows": [
+    {
+      "name": "static_text",
+      "value": "Hello"
+    },
+    {
+      "type": "text",
+      "value": "Static text: @local.static_text"
+    },
+    {
+      "type": "text",
+      "value": "@local.static_text"
+    },
+    {
+      "type": "text_box",
+      "name": "input_text"
+    },
+    {
+      "type": "text",
+      "value": "@local.input_text",
+      "parameter_list": "text_align:left;\nstyle: emphasised;"
+    },
+    {
+      "type": "text",
+      "value": "This shouldn't be here due to a condition",
+      "condition": false
+    },
+    {
+      "type": "text",
+      "value": "This should be here due to a condition",
+      "condition": true
+    },
+    {
+      "__EMPTY_3": "color: red"
+    },
+    {
+      "__EMPTY_3": "color: #A020F0"
+    },
+    {
+      "__EMPTY_3": "text-transform: uppercase"
+    },
+    {
+      "__EMPTY_3": "font-size:14px;"
+    }
+  ]
+}

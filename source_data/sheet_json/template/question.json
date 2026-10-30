@@ -1,0 +1,84 @@
+{
+  "flow_type": "template",
+  "flow_name": "question",
+  "status": "released",
+  "rows": [
+    {
+      "name": "question"
+    },
+    {
+      "name": "type"
+    },
+    {
+      "name": "list_name"
+    },
+    {
+      "name": "validation"
+    },
+    {
+      "name": "required"
+    },
+    {
+      "name": "placeholder"
+    },
+    {
+      "type": "text",
+      "value": "local.question",
+      "parameter_list": "value_type: script"
+    },
+    {
+      "type": "begin_template",
+      "name": "textbox_question",
+      "value": "textbox_question",
+      "condition": "@local.type == \"textbox\""
+    },
+    {
+      "name": "placeholder",
+      "value": "${local.placeholder}"
+    },
+    {
+      "type": "end_template"
+    },
+    {
+      "type": "begin_template",
+      "name": "dropdown_question",
+      "value": "dropdown_question",
+      "condition": "@local.type == \"dropdown\""
+    },
+    {
+      "name": "list_name",
+      "value": "${local.list_name}"
+    },
+    {
+      "name": "placeholder",
+      "value": "${local.placeholder}"
+    },
+    {
+      "type": "end_template"
+    },
+    {
+      "type": "begin_template",
+      "name": "checkbox_question",
+      "value": "checkbox_question",
+      "condition": "@local.type == \"checkbox\""
+    },
+    {
+      "type": "end_template"
+    },
+    {
+      "name": "value",
+      "value": "${local.textbox_question.value}",
+      "condition": "@local.type == \"textbox\""
+    },
+    {
+      "name": "value",
+      "value": "${local.dropdown_question.value}",
+      "condition": "@local.type == \"dropdown\""
+    },
+    {
+      "name": "value",
+      "value": "${local.checkbox_question.value}",
+      "condition": "@local.type == \"checkbox\""
+    }
+  ]
+}

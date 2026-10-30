@@ -1,0 +1,17 @@
+{
+  "flow_type": "data_list",
+  "flow_name": "basic_result",
+  "status": "released",
+  "rows": [
+    {
+      "id": "id_1",
+      "name": "name 1",
+      "value": "value 1"
+    }
+  ],
+  "_source": {
+    "name": "12LHuYxe0rCUZ0Bsk8nx_ce59tVa-8vFL",
+    "path": "Forms.xlsx",
+    "url": "https://docs.google.com/spreadsheets/d/1l6oX3c3s6UcdrpEvmMjjPe7mYCFkhfZAQo0yS9GfxhQ"
+  }
+}

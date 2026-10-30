@@ -1,0 +1,97 @@
+{
+  "flow_type": "data_list",
+  "flow_name": "button_parameters",
+  "status": "released",
+  "rows": [
+    {
+      "id": "variant",
+      "parameter": "variant",
+      "options_list": [
+        "button_variant_list"
+      ],
+      "list_filter": "component_list: button",
+      "default": "default",
+      "allow_free_text": false,
+      "description": "This is to change the look and feel"
+    },
+    {
+      "id": "style",
+      "parameter": "style",
+      "options_list": [
+        "button_style_list"
+      ],
+      "list_filter": "component_list: button",
+      "default": "information",
+      "allow_free_text": true,
+      "description": "This is to change the style"
+    },
+    {
+      "id": "disabled",
+      "parameter": "disabled",
+      "options_list": [
+        "boolean_list"
+      ],
+      "allow_free_text": false
+    },
+    {
+      "id": "textAlign",
+      "parameter": "textAlign",
+      "options_list": [
+        "align_list"
+      ],
+      "allow_free_text": false
+    },
+    {
+      "id": "buttonAlign",
+      "parameter": "buttonAlign",
+      "options_list": [
+        "align_list"
+      ],
+      "allow_free_text": false
+    },
+    {
+      "id": "icon",
+      "parameter": "icon",
+      "options_list": [
+        "image_list"
+      ],
+      "list_filter": "size: small",
+      "allow_free_text": false
+    },
+    {
+      "id": "iconSecondary",
+      "parameter": "iconSecondary",
+      "options_list": [
+        "image_list"
+      ],
+      "list_filter": "size: small",
+      "allow_free_text": false
+    },
+    {
+      "id": "image",
+      "parameter": "image",
+      "options_list": [
+        "image_list"
+      ],
+      "allow_free_text": false
+    },
+    {
+      "id": "iconAlign",
+      "parameter": "iconAlign",
+      "options_list": [
+        "align_list"
+      ],
+      "allow_free_text": false
+    }
+  ],
+  "_source": {
+    "name": "12LHuYxe0rCUZ0Bsk8nx_ce59tVa-8vFL",
+    "path": "Components.xlsx",
+    "url": "https://docs.google.com/spreadsheets/d/1yRizub7Rcfnz3hGdzDz7Quczv4yoxihBroIoXkJg-LA"
+  },
+  "_metadata": {
+    "allow_free_text": {
+      "type": "boolean"
+    }
+  }
+}

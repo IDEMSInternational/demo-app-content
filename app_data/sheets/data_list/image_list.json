@@ -1,0 +1,60 @@
+{
+  "flow_type": "data_list",
+  "flow_name": "image_list",
+  "status": "released",
+  "rows": [
+    {
+      "id": "image_1",
+      "value": "/images/image",
+      "name": "small square svg",
+      "type": "svg",
+      "ratio": "square",
+      "size": "small"
+    },
+    {
+      "id": "image_2",
+      "value": "/images/image",
+      "name": "small square png",
+      "type": "png",
+      "ratio": "square",
+      "size": "small"
+    },
+    {
+      "id": "image_3",
+      "value": "/images/image",
+      "name": "medium square svg",
+      "type": "svg",
+      "ratio": "square",
+      "size": "medium"
+    },
+    {
+      "id": "image_4",
+      "value": "/images/image",
+      "name": "medium square png",
+      "type": "png",
+      "ratio": "square",
+      "size": "medium"
+    },
+    {
+      "id": "image_5",
+      "value": "/images/image",
+      "name": "large square svg",
+      "type": "svg",
+      "ratio": "square",
+      "size": "large"
+    },
+    {
+      "id": "image_6",
+      "value": "/images/image",
+      "name": "large square png",
+      "type": "png",
+      "ratio": "square",
+      "size": "large"
+    }
+  ],
+  "_source": {
+    "name": "12LHuYxe0rCUZ0Bsk8nx_ce59tVa-8vFL",
+    "path": "Components.xlsx",
+    "url": "https://docs.google.com/spreadsheets/d/1yRizub7Rcfnz3hGdzDz7Quczv4yoxihBroIoXkJg-LA"
+  }
+}
